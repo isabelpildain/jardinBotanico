@@ -13,14 +13,24 @@ export class AppComponent {
 
   public appPages = [
     {
-      title: 'Home',
-      url: '/home',
-      icon: 'home'
+      title: 'Institucional',
+      url: '/Institucional',
+      icon: 'document'
     },
     {
-      title: 'List',
-      url: '/list',
-      icon: 'list'
+      title: 'Tarifas y Horarios',
+      url: '/Tarifas y Horarios',
+      icon: 'cash'
+    },
+    {
+      title: 'Parqueadero',
+      url: '/Parqueadero',
+      icon: 'bus'
+    },
+    {
+      title: 'Cerrar Sesion',
+      url: '/Cerrar Sesion',
+      icon: 'tablet-portrait'
     }
   ];
 
