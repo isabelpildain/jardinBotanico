@@ -14,17 +14,18 @@ export class AppComponent {
   public appPages = [
     {
       title: 'Institucional',
-      url: '/Institucional',
-      icon: 'document'
+      url: '/institucional',
+      icon: 'document'    
+
     },
     {
       title: 'Tarifas y Horarios',
-      url: '/Tarifas y Horarios',
+      url: '/tarifas-horarios',
       icon: 'cash'
     },
     {
       title: 'Parqueadero',
-      url: '/Parqueadero',
+      url: '/parqueadero',
       icon: 'bus'
     },
     {
