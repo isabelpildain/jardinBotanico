@@ -15,8 +15,7 @@ export class AppComponent {
     {
       title: 'Institucional',
       url: '/institucional',
-      icon: 'document'    
-
+      icon: 'document'
     },
     {
       title: 'Tarifas y Horarios',
