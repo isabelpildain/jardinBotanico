@@ -2,7 +2,8 @@ import {Injectable} from '@angular/core';
 import 'rxjs/add/operator/map';
 import {Parse} from 'parse';
 import {ENV} from '../app/app.constant';
-import {PortafoliosInteface} from '../interfaces/portafolioInterface';
+import {PortafolioInterface} from '../interfaces/PortafolioInterface';
+import {ServicioInterface} from '../interfaces/ServicioInterface';
 
 
 @Injectable({
@@ -18,15 +19,31 @@ export class ParseProviderService {
         console.log('Initiated Parse');
     }
 
-    public getItemsPortafolio(offset: number = 0, limit: number = 3): Promise<any> {
+    public getItemsPortafolios(offset: number = 0, limit: number = 3): Promise<any> {
         return new Promise((resolve, reject) => {
             setTimeout(() => {
-                const portafolios: PortafoliosInteface = Parse.Object.extend('portafolios');
+                const portafolios: PortafolioInterface[] = Parse.Object.extend('portafolios');
                 const query = new Parse.Query(portafolios);
                 query.skip(offset);
                 query.limit(limit);
                 query.find().then((itemPortafolios) => {
                     resolve(itemPortafolios);
+                }, (error) => {
+                    reject(error);
+                });
+            }, 500);
+        });
+    }
+
+    public getItemsServicios(offset: number = 0, limit: number = 3): Promise<any> {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                const servicios: ServicioInterface[] = Parse.Object.extend('servicios');
+                const query = new Parse.Query(servicios);
+                query.skip(offset);
+                query.limit(limit);
+                query.find().then((itemsServicios) => {
+                    resolve(itemsServicios);
                 }, (error) => {
                     reject(error);
                 });

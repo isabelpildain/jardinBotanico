@@ -1,4 +1,4 @@
-export interface PortafoliosInteface {
+export interface PortafolioInterface {
     titulo: string;
     contenido: string;
     decripcion: string;

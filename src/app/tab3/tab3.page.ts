@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {ParseProviderService} from '../parse-provider.service';
-import {PortafoliosInteface} from '../../interfaces/portafolioInterface';
+import {PortafolioInterface} from '../../interfaces/PortafolioInterface';
 @Component({
     selector: 'app-tab3',
     templateUrl: 'tab3.page.html',
@@ -8,7 +8,7 @@ import {PortafoliosInteface} from '../../interfaces/portafolioInterface';
 })
 export class Tab3Page {
 
-  itemsPortafolios: PortafoliosInteface[]  = [];
+  itemsPortafolios: PortafolioInterface[]  = [];
 
     constructor(private parseProvider: ParseProviderService) {
       this.listPortafolio();
@@ -17,7 +17,7 @@ export class Tab3Page {
     public listPortafolio(): Promise<any> {
         const offset = this.itemsPortafolios.length;
         const limit = 10;
-        return this.parseProvider.getItemsPortafolio(offset, limit).then((result) => {
+        return this.parseProvider.getItemsPortafolios(offset, limit).then((result) => {
             for (const item of result) {
               this.itemsPortafolios.push(item);
             }
