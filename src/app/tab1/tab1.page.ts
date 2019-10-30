@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { MenuController } from '@ionic/angular';
+import {inicioInterface} from '../../interfaces/inicioInterface'; 
+import {ParseProviderService} from '../parse-provider.service';
+
 
 @Component({
   selector: 'app-tab1',
@@ -7,5 +10,23 @@ import { MenuController } from '@ionic/angular';
   styleUrls: ['tab1.page.scss'],
 })
 export class Tab1Page {
-  constructor() {}
+
+    itemsInicio: inicioInterface[] = [];
+
+    constructor(private parseProvider: ParseProviderService) {
+      this.listInicio();
+    }
+
+    public listInicio(): Promise<any> {
+      const offset = this.itemsInicio.length;
+      const limit = 10;
+      return this.parseProvider.getItemsInicio(offset, limit).then((result) => {
+        for (const item of result) {
+          this.itemsInicio.push(item);
+        }
+      }, (error) => {
+        console.log(error);
+      });
+    }
+
 }

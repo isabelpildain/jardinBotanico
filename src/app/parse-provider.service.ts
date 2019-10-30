@@ -4,6 +4,7 @@ import {Parse} from 'parse';
 import {ENV} from '../app/app.constant';
 import {PortafolioInterface} from '../interfaces/PortafolioInterface';
 import {ServicioInterface} from '../interfaces/ServicioInterface';
+import {inicioInterface} from '../interfaces/inicioInterface';
 
 
 @Injectable({
@@ -50,6 +51,22 @@ export class ParseProviderService {
             }, 500);
         });
     }
+    public getItemsInicio(offset: number = 0, limit: number = 3): Promise<any> {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                const objetosinicio: inicioInterface[] = Parse.Object.extend('objetosinicio');
+                const query = new Parse.Query(objetosinicio);
+                query.skip(offset);
+                query.limit(limit);
+                query.find().then((itemsInicio) => {
+                    resolve(itemsInicio);
+                }, (error) => {
+                    reject(error);
+                });
+            }, 500);
+        });
+    }
+
 
     private parseInitialize() {
         Parse.initialize(this.parseAppId);

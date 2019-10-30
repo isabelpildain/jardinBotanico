@@ -2,13 +2,21 @@
 
     <ion-card *ngFor="let item of itemsPortafolios">
         <ion-item>
-            <ion-icon name="pin" slot="start"></ion-icon>
+            <ion-icon name="paper" slot="start"></ion-icon>
             <ion-label>{{item.get('titulo')}}</ion-label>
             <ion-button fill="outline" slot="end" [routerLink]="['/login']">Ver</ion-button>
         </ion-item>
-
         <ion-card-content>
             {{item.get('descripcion')}}
+        </ion-card-content>
+        <ion-card-content>
+            {{item.get('hora')}}
+            <br>
+            {{item.get('lugar')}}
+            <br>
+            {{item.get('fecha')}}
+            <br>
+            {{item.get('valor')}}
         </ion-card-content>
     </ion-card>
 

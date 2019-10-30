@@ -1,86 +1,30 @@
-<ion-content>
+<ion-content>  
 
-    
+  <ion-card >
+    <ion-card-title text-center>BIENVENIDOS</ion-card-title>
+  </ion-card>
 
-    <ion-card >
-      <ion-card-title text-center>BIENVENIDOS</ion-card-title>
-      <br>
-      <p text-center>El Jardin Botanico de Medellin participa activamente en el proceso de embellecimiento paisajismo de diferentes espacios publicos de la</p>
-    </ion-card>
-    <br>
-  
-    <ion-card-title text-center>Noticias</ion-card-title>
-    <p text-center>Disfruta de Nuestras Noticias en Cualquier Parte del Mundo!.</p>
-    <br>
+  <p >........</p>
 
-    <ion-card>      
-      <p text-center>El Jardin Botanico de Medellin Es una Fundacion Privada sin Animos de Lucro, que se ha Convertido en un Proyecto de Cuidad con un Objetivo muy Claro, Transformarse en un Espacio de Encuentro Ciudadano.</p>
-    </ion-card>
-    <br>
+  <br>
+  <ion-card-title>Noticias</ion-card-title> 
+  <br>
 
-    
-    <ion-card class="welcome-card">
-      <img src="assets/img/recorrido.jpg" alt="" height="280px" width="375px" ondurationchange="     "/>
-      <ion-card-header>
-        <ion-card-subtitle>Mitos y leyendas en el bosque encantado </ion-card-subtitle>
-        <ion-card-title>Noche de linternas <br>
-        </ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        <p>Fecha:Jueves 24 <br> Hora: 18:30pm-20:30pm <br>Valor:30.000 (incluye refrigerio)</p>
-      </ion-card-content>
-    </ion-card>
-    <br>
+  <ion-card *ngFor="let objetosinicio of itemsInicio">
+    <ion-card-header>
+        <ion-img [src]="objetosinicio.get('imagen')"></ion-img>
+        <h6>{{objetosinicio.get('subtitulo')}}</h6>
+        <ion-card-title>{{objetosinicio.get('titulo')}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+        {{objetosinicio.get('hora')}}
+        <br>
+        {{objetosinicio.get('lugar')}}
+        <br>
+        {{objetosinicio.get('fecha')}}
+    </ion-card-content>
+  </ion-card>
 
-    <ion-card class="welcome-card">
-      <img src="assets/img/niños.jpg" alt="" height="280px" width="375px" ondurationchange="     "/>
-      <ion-card-header>
-        <ion-card-subtitle>LOS SUPERHÉROES DEL PLANETA! </ion-card-subtitle>
-        <ion-card-title>Jardinería para niños<br>
-        </ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        <p>Fecha:Sábado 5 <br> Hora: 9:00am-13:00pm <br>Valor:70.000 (incluye refrigerio)<br>Aula de los magnolios </p>
-      </ion-card-content>
-    </ion-card>
-    <br>
-    
-    <ion-card class="welcome-card">
-      <img src="assets/img/restaurant.jpg" alt="" height="280px" width="375px" ondurationchange="     "/>
-      <ion-card-header>
-        <ion-card-subtitle>GRAN INAUGURACIÓN <br> ¡Ven y disfruta de maravillosos chefts profesionales!</ion-card-subtitle>
-        <ion-card-title>Restaunrante de Martín donde comer siempre es un festín <br> 
-        </ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        <p>Fecha inauguración: Jueves 24 <br> Hora: 18:30pm<br>Valor: Sin costo.</p>
-      </ion-card-content>
-    </ion-card>
-    <br>
-
-    <ion-card class="welcome-card">
-      <img src="assets/img/descuento.png" alt="" height="280px" width="375px" ondurationchange="     "/>
-      <ion-card-header>
-        <ion-card-subtitle>!DESCUENTOS DE LOCURA! <br> </ion-card-subtitle>
-        <ion-card-title>Aprovecha los descuentos en nuestro vivero del 20%,30% Y HASTA 40% <br> 
-        </ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        <p>Fecha: 25/10 - 10/11   <br> Hora:. <br>Valor:.</p>
-      </ion-card-content>
-    </ion-card>
-    <br>
-
-    <ion-card class="welcome-card">
-      <img src="assets/img/guia.jpg" alt="" height="280px" width="375px" ondurationchange="     "/>
-      <ion-card-header>
-        <ion-card-subtitle>Ven, disfruta y goza al máximo nuestros recorridos. <br> </ion-card-subtitle>
-        <ion-card-title>Recorridos con guías <br> 
-        </ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        <p>Fecha:25/10<br>10/11<br>22/11  <br> Hora:10:00am y 13:00pm <br>Valor:5.000$ pp</p>
-      </ion-card-content>
-    </ion-card>
-
+  <br>
+  <p text-center>Email: Jardinbotanico@gmail.com, Tlf: 444 5588 - 333 4441,  Medellin-Antioquia.</p>
 </ion-content>
