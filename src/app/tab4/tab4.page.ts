@@ -26,6 +26,4 @@ export class Tab4Page {
       console.log(error);
     });
   }
-
-
 }
