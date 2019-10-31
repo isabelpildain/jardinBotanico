@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {institucionalInterface} from '../../interfaces/institucionalInterface'; 
+import {ParseProviderService} from '../parse-provider.service';
 
 @Component({
   selector: 'app-institucional',
@@ -7,9 +9,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InstitucionalPage implements OnInit {
 
-  constructor() { }
+  itemsInstitucional: institucionalInterface[] = []
+  ;
+  constructor(private parseProvider: ParseProviderService) {
+    this.listInstitucional();
+  }  
 
-  ngOnInit() {
+
+  public listInstitucional(): Promise<any> {
+    const offset = this.itemsInstitucional.length;
+    const limit = 10;
+    return this.parseProvider.getItemsInstitucional(offset, limit).then((result) => {
+      for (const item of result) {
+        this.itemsInstitucional.push(item);
+      }
+    }, (error) => {
+      console.log(error);
+    });
   }
-
+ngOnInit() {}
 }
+

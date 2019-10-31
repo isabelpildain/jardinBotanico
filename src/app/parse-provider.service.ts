@@ -5,6 +5,7 @@ import {ENV} from '../app/app.constant';
 import {PortafolioInterface} from '../interfaces/PortafolioInterface';
 import {ServicioInterface} from '../interfaces/ServicioInterface';
 import {inicioInterface} from '../interfaces/inicioInterface';
+import {institucionalInterface} from '../interfaces/institucionalInterface';
 
 
 @Injectable({
@@ -66,6 +67,22 @@ export class ParseProviderService {
             }, 500);
         });
     }
+    public getItemsInstitucional(offset: number = 0, limit: number = 3): Promise<any> {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                const institucional: institucionalInterface[] = Parse.Object.extend('institucional');
+                const query = new Parse.Query(institucional);
+                query.skip(offset);
+                query.limit(limit);
+                query.find().then((ItemsInstitucional) => {
+                    resolve(ItemsInstitucional);
+                }, (error) => {
+                    reject(error);
+                });
+            }, 500);
+        });
+    }
+
 
 
     private parseInitialize() {
