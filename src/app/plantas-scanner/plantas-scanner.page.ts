@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {QRScanner, QRScannerStatus} from '@ionic-native/qr-scanner/ngx';
+import { Router, NavigationExtras } from '@angular/router';
 
 @Component({
     selector: 'app-plantas-scanner',
@@ -10,7 +11,7 @@ export class PlantasScannerPage implements OnInit {
 
     public scanSubscription: any;
 
-    constructor(private qrScanner: QRScanner) {
+    constructor(private qrScanner: QRScanner, private route: Router) {
         this.scan();
     }
 
@@ -18,13 +19,20 @@ export class PlantasScannerPage implements OnInit {
     }
 
     scan() {
+        (window.document.querySelector('ion-app') as HTMLElement).classList.add('cameraView');
         this.qrScanner.prepare()
             .then((status: QRScannerStatus) => {
                 if (status.authorized) {
                     this.qrScanner.show();
                     this.showCamera();
-                    this.scanSubscription = this.qrScanner.scan().subscribe((text: string) => {
-                        console.log(text);
+                    this.scanSubscription = this.qrScanner.scan().subscribe((idParam: string) => {
+                        console.log('in Scanner', idParam);
+                        const navigationE: NavigationExtras = {
+                            queryParams: {
+                                id: idParam
+                            }
+                        }
+                        this.route.navigate(['plantas-view'], navigationE);
                     });
                 } else {
                     console.error('Permission Denied', status);
@@ -39,7 +47,7 @@ export class PlantasScannerPage implements OnInit {
       // tslint:disable-next-line:no-unused-expression
         (this.scanSubscription) ? this.scanSubscription.unsubscribe() : null;
         this.scanSubscription = null;
-        (window.document.querySelector('app-plantas-scanner') as HTMLElement).classList.remove('cameraView');
+        (window.document.querySelector('ion-app') as HTMLElement).classList.remove('cameraView');
         this.qrScanner.hide();
         this.hideCamera();
         this.qrScanner.destroy();
@@ -54,13 +62,13 @@ export class PlantasScannerPage implements OnInit {
     }
 
     showCamera() {
-        (window.document.querySelector('app-plantas-scanner') as HTMLElement).classList.add('cameraView');
-        console.log((window.document.querySelector('app-plantas-scanner') as HTMLElement));
+        (window.document.querySelector('ion-app') as HTMLElement).classList.add('cameraView');
+        window.document.body.style.backgroundColor = 'transparent';
     }
 
     hideCamera() {
-        (window.document.querySelector('app-plantas-scanner') as HTMLElement).classList.remove('cameraView');
-        console.log((window.document.querySelector('app-plantas-scanner') as HTMLElement));
+        (window.document.querySelector('ion-app') as HTMLElement).classList.remove('cameraView');
+        window.document.body.style.backgroundColor = '#FFF';
     }
 
 }

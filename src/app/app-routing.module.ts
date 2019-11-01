@@ -12,7 +12,8 @@ const routes: Routes = [
   { path: 'institucional', loadChildren: './institucional/institucional.module#InstitucionalPageModule' },
   { path: 'tarifas-horarios', loadChildren: './tarifas-horarios/tarifas-horarios.module#TarifasHorariosPageModule' },
   { path: 'parqueadero', loadChildren: './parqueadero/parqueadero.module#ParqueaderoPageModule' },
-  { path: 'plantas-scanner', loadChildren: './plantas-scanner/plantas-scanner.module#PlantasScannerPageModule' }
+  { path: 'plantas-scanner', loadChildren: './plantas-scanner/plantas-scanner.module#PlantasScannerPageModule' },
+  { path: 'plantas-view', loadChildren: './plantas-view/plantas-view.module#PlantasViewPageModule' }
 
 ];
 @NgModule({

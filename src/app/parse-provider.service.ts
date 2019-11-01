@@ -67,6 +67,14 @@ export class ParseProviderService {
         });
     }
 
+    public getItemPlantasArticulo(id: string): any {
+        console.log(id);
+        const articulo = Parse.Object.extend('plantas_articulos');
+        const query = new Parse.Query(articulo);
+        const response = query.get(id);
+        console.log(response);
+        return response;
+    }
 
     private parseInitialize() {
         Parse.initialize(this.parseAppId);
