@@ -1,9 +1,12 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>plantas-view</ion-title>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button default-href="/tabs/tab1"></ion-back-button>
+    </ion-buttons>
+    <ion-title *ngIf="item">{{item.get('nombre')}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  {{item.articulo}}
+<ion-content *ngIf="item">
+  {{item.get('articulo')}}
 </ion-content>

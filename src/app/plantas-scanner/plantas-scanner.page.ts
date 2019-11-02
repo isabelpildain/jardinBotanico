@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, NgZone, OnInit, OnDestroy} from '@angular/core';
 import {QRScanner, QRScannerStatus} from '@ionic-native/qr-scanner/ngx';
 import { Router, NavigationExtras } from '@angular/router';
 
@@ -11,11 +11,10 @@ export class PlantasScannerPage implements OnInit {
 
     public scanSubscription: any;
 
-    constructor(private qrScanner: QRScanner, private route: Router) {
-        this.scan();
-    }
+    constructor(private qrScanner: QRScanner, private route: Router, private ngZone: NgZone) {}
 
     ngOnInit() {
+        this.scan();
     }
 
     scan() {
@@ -26,13 +25,13 @@ export class PlantasScannerPage implements OnInit {
                     this.qrScanner.show();
                     this.showCamera();
                     this.scanSubscription = this.qrScanner.scan().subscribe((idParam: string) => {
-                        console.log('in Scanner', idParam);
                         const navigationE: NavigationExtras = {
                             queryParams: {
                                 id: idParam
                             }
                         }
-                        this.route.navigate(['plantas-view'], navigationE);
+                        this.stopScanning();
+                        this.ngZone.run(() => this.route.navigate(['plantas-view'], navigationE)).then();
                     });
                 } else {
                     console.error('Permission Denied', status);
@@ -44,7 +43,7 @@ export class PlantasScannerPage implements OnInit {
     }
 
     stopScanning() {
-      // tslint:disable-next-line:no-unused-expression
+        // tslint:disable-next-line:no-unused-expression
         (this.scanSubscription) ? this.scanSubscription.unsubscribe() : null;
         this.scanSubscription = null;
         (window.document.querySelector('ion-app') as HTMLElement).classList.remove('cameraView');

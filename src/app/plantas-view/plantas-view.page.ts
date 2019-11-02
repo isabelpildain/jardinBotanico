@@ -9,20 +9,18 @@ import {ParseProviderService} from '../parse-provider.service';
 })
 export class PlantasViewPage implements OnInit {
 
-  private id: string;
   item: any;
 
   constructor(private route: ActivatedRoute, private router: Router, private parseProvider: ParseProviderService) {
     this.route.queryParams.subscribe( params => {
-      console.log('in-view', params.id);
       if (params && params.id) {
-        this.id = params.id;
+        this.parseProvider.getItemPlantasArticulo(params.id).then( (item) => {
+          this.item = item;
+        });
       }
     });
-    this.item = this.parseProvider.getItemPlantasArticulo(this.id);
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
 }

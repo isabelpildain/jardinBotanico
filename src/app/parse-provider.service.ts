@@ -17,7 +17,6 @@ export class ParseProviderService {
 
     constructor() {
         this.parseInitialize();
-        console.log('Initiated Parse');
     }
 
     public getItemsPortafolios(offset: number = 0, limit: number = 3): Promise<any> {
@@ -67,13 +66,18 @@ export class ParseProviderService {
         });
     }
 
-    public getItemPlantasArticulo(id: string): any {
-        console.log(id);
-        const articulo = Parse.Object.extend('plantas_articulos');
-        const query = new Parse.Query(articulo);
-        const response = query.get(id);
-        console.log(response);
-        return response;
+    public async getItemPlantasArticulo(id: string): Promise<any> {
+        return await new Promise((resolve, reject) => {
+            setTimeout(() => {
+                const articulo = Parse.Object.extend('plantas_articulos');
+                const query = new Parse.Query(articulo);
+                query.get(id).then((item) => {
+                    resolve(item);
+                }, (error) => {
+                    reject(error);
+                });
+            }, 500);
+        });
     }
 
     private parseInitialize() {
