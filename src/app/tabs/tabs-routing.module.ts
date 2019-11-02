@@ -48,6 +48,16 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'plantas-scanner',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+                import('../plantas-scanner/plantas-scanner.module').then(m => m.PlantasScannerPageModule)
+          }
+        ]
+      },
+      {
         path: '',
         redirectTo: '/tabs/tab1',
         pathMatch: 'full'
