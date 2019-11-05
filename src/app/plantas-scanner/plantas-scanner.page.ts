@@ -1,4 +1,4 @@
-import {Component, NgZone, OnInit, OnDestroy} from '@angular/core';
+import {Component, NgZone, OnInit} from '@angular/core';
 import {QRScanner, QRScannerStatus} from '@ionic-native/qr-scanner/ngx';
 import { Router, NavigationExtras } from '@angular/router';
 

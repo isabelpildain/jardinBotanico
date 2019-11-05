@@ -1,6 +1,8 @@
-import {Component} from '@angular/core';
+import {Component, NgZone} from '@angular/core';
 import {ParseProviderService} from '../parse-provider.service';
 import {PortafolioInterface} from '../../interfaces/PortafolioInterface';
+import {NavigationExtras, Router} from '@angular/router';
+
 @Component({
     selector: 'app-tab3',
     templateUrl: 'tab3.page.html',
@@ -10,7 +12,7 @@ export class Tab3Page {
 
   itemsPortafolios: PortafolioInterface[]  = [];
 
-    constructor(private parseProvider: ParseProviderService) {
+    constructor(private parseProvider: ParseProviderService, private route: Router, private ngZone: NgZone) {
       this.listPortafolio();
     }
 
@@ -24,6 +26,15 @@ export class Tab3Page {
         }, (error) => {
             console.log(error);
         });
+    }
+
+    public enviarPortafolioVista(item: any) {
+        const navigationE: NavigationExtras = {
+            queryParams: {
+                item: JSON.stringify(item)
+            }
+        }
+        this.ngZone.run(() => this.route.navigate(['portafolio-vista'], navigationE)).then();
     }
 
 }

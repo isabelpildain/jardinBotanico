@@ -1,0 +1,23 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/"></ion-back-button>
+        </ion-buttons>
+        <ion-title>Item</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-card *ngIf="item">
+        <ion-card-header>
+            <ion-card-subtitle>{{item.valor}}</ion-card-subtitle>
+            <ion-card-title>{{item.titulo}}</ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+            {{item.descripcion}}
+        </ion-card-content>
+    </ion-card>
+
+</ion-content>
