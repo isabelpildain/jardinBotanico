@@ -28,6 +28,11 @@ export class AppComponent {
       icon: 'bus'
     },
     {
+      title: 'Recomendaciones',
+      url: '/recomendaciones',
+      icon: 'bus'
+    },
+    {
       title: 'Cerrar Sesion',
       url: '/Cerrar Sesion',
       icon: 'tablet-portrait'
