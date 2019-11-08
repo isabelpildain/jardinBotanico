@@ -6,6 +6,8 @@ import {PortafolioInterface} from '../interfaces/PortafolioInterface';
 import {ServicioInterface} from '../interfaces/ServicioInterface';
 import {inicioInterface} from '../interfaces/inicioInterface';
 import {institucionalInterface} from '../interfaces/institucionalInterface';
+import {restauranteInterface} from '../interfaces/restauranteInterface';
+
 
 
 @Injectable({
@@ -96,6 +98,24 @@ export class ParseProviderService {
             }, 500);
         });
     }
+
+    public getItemsrestaurante(offset: number = 0, limit: number = 3): Promise<any> {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                const restaurantes: restauranteInterface[] = Parse.Object.extend('restaurantes');
+                const query = new Parse.Query(restaurantes);
+                query.skip(offset);
+                query.limit(limit);
+                query.find().then((itemsrestaurante) => {
+                    resolve(itemsrestaurante);
+                }, (error) => {
+                    reject(error);
+                });
+            }, 500);
+        });
+    }
+
+   
 
     private parseInitialize() {
         Parse.initialize(this.parseAppId);
