@@ -22,6 +22,20 @@ export class ParseProviderService {
         this.parseInitialize();
     }
 
+    public getItemsMarcadores(): Promise<any> {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                const marcadores: any[] = Parse.Object.extend('mapa_marcadores');
+                const query = new Parse.Query(marcadores);
+                query.find().then((item) => {
+                    resolve(item);
+                }, (error) => {
+                    reject(error);
+                });
+            }, 500);
+        });
+    }
+
     public getItemsPortafolios(offset: number = 0, limit: number = 3): Promise<any> {
         return new Promise((resolve, reject) => {
             setTimeout(() => {
