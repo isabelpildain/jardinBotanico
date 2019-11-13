@@ -8,6 +8,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { QRScanner} from '@ionic-native/qr-scanner/ngx';
 
+
+//archivo pdf
+import {File} from '@ionic-native/file/ngx';
+import {FileOpener} from '@ionic-native/file-opener/ngx';
+import {FileTransfer} from '@ionic-native/file-transfer/ngx';
+import {DocumentViewer} from '@ionic-native/document-viewer/ngx';
+
+import {InAppBrowser} from '@ionic-native/in-app-browser/ngx';
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -16,7 +25,13 @@ import { QRScanner} from '@ionic-native/qr-scanner/ngx';
     StatusBar,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    QRScanner
+
+    QRScanner,
+    File,
+    FileOpener,
+    FileTransfer,
+    DocumentViewer,
+    InAppBrowser
   ],
   bootstrap: [AppComponent]
 })
