@@ -7,6 +7,8 @@ import {ServicioInterface} from '../interfaces/ServicioInterface';
 import {inicioInterface} from '../interfaces/inicioInterface';
 import {institucionalInterface} from '../interfaces/institucionalInterface';
 import {restauranteInterface} from '../interfaces/restauranteInterface';
+import {cursosInterface} from '../interfaces/cursosInterface';
+import {eventosInterface} from '../interfaces/eventosInterface';
 
 
 
@@ -122,6 +124,38 @@ export class ParseProviderService {
                 query.limit(limit);
                 query.find().then((itemsrestaurante) => {
                     resolve(itemsrestaurante);
+                }, (error) => {
+                    reject(error);
+                });
+            }, 500);
+        });
+    }
+
+    public getItemscursos(offset: number = 0, limit: number = 3): Promise<any> {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                const cursos: cursosInterface[] = Parse.Object.extend('cursos');
+                const query = new Parse.Query(cursos);
+                query.skip(offset);
+                query.limit(limit);
+                query.find().then((itemscursos) => {
+                    resolve(itemscursos);
+                }, (error) => {
+                    reject(error);
+                });
+            }, 500);
+        });
+    }
+
+    public getItemseventos(offset: number = 0, limit: number = 3): Promise<any> {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                const eventos: eventosInterface[] = Parse.Object.extend('eventos');
+                const query = new Parse.Query(eventos);
+                query.skip(offset);
+                query.limit(limit);
+                query.find().then((itemseventos) => {
+                    resolve(itemseventos);
                 }, (error) => {
                     reject(error);
                 });

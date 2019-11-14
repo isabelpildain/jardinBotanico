@@ -23,21 +23,32 @@
     <ion-card-title style="font-weight: bold">Noticias</ion-card-title>
     <br>
 
+    
     <ion-card *ngFor="let objetosinicio of itemsInicio">
-    <ion-card-header>
-        <ion-img [src]="objetosinicio.get('imagen')"></ion-img>
-        <h6>{{objetosinicio.get('subtitulo')}}</h6>
-        <ion-card-title>{{objetosinicio.get('titulo')}}</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-        {{objetosinicio.get('hora')}}
-        <br>
-        {{objetosinicio.get('lugar')}}
-        <br>
-        {{objetosinicio.get('fecha')}}
-    </ion-card-content>
-  </ion-card>
+        <ion-card-header>
+            <ion-img [src]="objetosinicio.get('imagen')"></ion-img>
+            <h6>{{objetosinicio.get('subtitulo')}}</h6>
+            <ion-card-title>{{objetosinicio.get('titulo')}}</ion-card-title>
+            
+        </ion-card-header>
+        
+            <ion-card-content>         
+                
+                {{objetosinicio.get('hora')}}
+                <br>
+                {{objetosinicio.get('lugar')}}
+                <br>
+                {{objetosinicio.get('fecha')}}
+                <br>
+                <ion-button slot="end" routerLink="/tab3">Ver</ion-button>                                        
+                
+            </ion-card-content>
+                                    
+    </ion-card>
+   
 
   <br>
   <p class="ion-text-center">comunicaciones@jbotanico.org 4445500 ext.103/<br> Calle #73 51 D 14 Medellín, Colombia. www.botanicomedellin.org</p>
 </ion-content>
+
+
