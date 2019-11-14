@@ -24,3 +24,4 @@ const routes: Routes = [
   declarations: [RestaurantesPage]
 })
 export class RestaurantesPageModule {}
+
