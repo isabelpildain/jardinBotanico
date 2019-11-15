@@ -3,6 +3,7 @@
 
 /** Ionic CSS Variables **/
 :root {
+  
   /** primary **/
   --ion-color-primary: linear-gradient(160deg,#293462 30%,#00818a ,#f7be16);
   --ion-color-primary-rgb: 56, 128, 255;
@@ -45,9 +46,9 @@
 
 
   /** danger **/
-  --ion-color-danger: #f04141;
+  --ion-color-danger: #ff9933;
   --ion-color-danger-rgb: 245, 61, 61;
-  --ion-color-danger-contrast: #ffffff;
+  --ion-color-danger-contrast: #31acb4;
   --ion-color-danger-contrast-rgb: 255, 255, 255;
   --ion-color-danger-shade: #d33939;
   --ion-color-danger-tint: #f25454;
