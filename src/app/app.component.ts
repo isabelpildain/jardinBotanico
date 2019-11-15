@@ -18,7 +18,7 @@ export class AppComponent {
       icon: 'document'
     },
     {
-      title: 'Tarifas y Horarios',
+      title: 'Horarios',
       url: '/tarifas-horarios',
       icon: 'cash'
     },

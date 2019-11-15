@@ -1,4 +1,7 @@
 <ion-content>
+    <!-- <ion-card> -->
+        <!-- <img class="logo" src="assets/img/logojardin.png"> -->
+    <!-- </ion-card> -->
     <br>
     <ion-card-title class="ion-text-center" style="font-weight: bold; text-size:70pd">BIENVENIDOS</ion-card-title>
     <br>
@@ -17,14 +20,11 @@
         Para lograr esto, orientamos nuestro quehacer en CUATRO EJES estratégicos que guían la labor y nos permite tener claros nuestros sueños.
 
     </p>
-    <p >........</p>
-
-    <br>
-    <ion-card-title style="font-weight: bold">Noticias</ion-card-title>
-    <br>
+    <hr>
 
     
     <ion-card *ngFor="let objetosinicio of itemsInicio">
+        <ion-card-title style="font-weight: bold" text-center>Noticias</ion-card-title>
         <ion-card-header>
             <ion-img [src]="objetosinicio.get('imagen')"></ion-img>
             <h6>{{objetosinicio.get('subtitulo')}}</h6>
@@ -40,7 +40,7 @@
                 <br>
                 {{objetosinicio.get('fecha')}}
                 <br>
-                <ion-button slot="end" routerLink="/tab3">Ver</ion-button>                                        
+                <ion-button routerLink="/tab3"><ion-icon name="ios-leaf" ></ion-icon>Ver</ion-button>                                        
                 
             </ion-card-content>
                                     
