@@ -34,7 +34,7 @@ export class AppComponent {
     },
     {
       title: 'Cerrar Sesion',
-      url: '/Cerrar Sesion',
+      url: 'exit()',
       icon: 'tablet-portrait'
     }
   ];
@@ -59,4 +59,5 @@ export class AppComponent {
       this.splashScreen.hide();
     });
   }
+  
 }

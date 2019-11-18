@@ -37,6 +37,6 @@ export class RefresherExample {
     setTimeout(() => {
       console.log('Async operation has ended');
       event.target.complete();
-    }, 0);
+    }, 2000);
   }
 }
