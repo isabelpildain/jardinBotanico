@@ -7,10 +7,12 @@ import { MenuController } from '@ionic/angular';
   styleUrls: ['tabs.page.scss']
 })
 export class TabsPage {
+  
 
   constructor(private menu: MenuController) {}
+  
 
-  openFirst() {
+   openFirst() {
     this.menu.enable(true, 'first');
     this.menu.open('first');
   }
@@ -24,4 +26,17 @@ export class TabsPage {
     this.menu.open('custom');
   }
 
+}
+
+export class RefresherExample {
+  constructor() {}
+
+  doRefresh(event) {
+    console.log('Begin async operation');
+
+    setTimeout(() => {
+      console.log('Async operation has ended');
+      event.target.complete();
+    }, 0);
+  }
 }

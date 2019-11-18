@@ -17,6 +17,8 @@ export class Tab1Page {
       this.listInicio();
     }
 
+    
+
     public listInicio(): Promise<any> {
       const offset = this.itemsInicio.length;
       const limit = 10;
@@ -30,3 +32,4 @@ export class Tab1Page {
     }
 
 }
+
