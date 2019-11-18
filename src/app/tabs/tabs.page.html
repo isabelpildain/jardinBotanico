@@ -5,7 +5,7 @@
             <ion-menu-button></ion-menu-button>
         </ion-buttons>
         <ion-thumbnail slot="start">
-          <ion-img src="/assets/icon/logo.png"></ion-img>
+            <ion-img src="/assets/icon/logo.png"></ion-img>
         </ion-thumbnail>
         <ion-title>
             <h2 class="ion-text-center">Jardin Botanico</h2>
@@ -14,7 +14,24 @@
 
 </ion-header>
 
-<ion-content >
+<ion-content>
+
+        <ion-fab vertical="top" horizontal="end" slot="fixed">
+                <ion-fab-button>
+                        <ion-icon name="at"></ion-icon>
+                </ion-fab-button>
+                <ion-fab-list side="bottom">
+                  <ion-fab-button><ion-icon class="ic1" name="logo-facebook"></ion-icon></ion-fab-button>
+                  <ion-fab-button><ion-icon class="ic2" name="logo-instagram"></ion-icon></ion-fab-button>
+                  <ion-fab-button><ion-icon class="ic3" name="logo-linkedin"></ion-icon></ion-fab-button>
+                  <ion-fab-button><ion-icon class="ic4" name="logo-twitter"></ion-icon></ion-fab-button>
+                  <ion-fab-button><ion-icon class="ic5" name="logo-whatsapp"></ion-icon></ion-fab-button>
+                  <ion-fab-button><ion-icon class="ic6" name="logo-youtube"></ion-icon></ion-fab-button>
+
+                </ion-fab-list>
+                
+              </ion-fab>
+
     <ion-tabs>
 
         <ion-tab-bar slot="bottom">
