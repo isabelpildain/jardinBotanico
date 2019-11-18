@@ -1,6 +1,51 @@
+ion-card{
+ 
+}
+
+ion-card-title{
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
+}
 .bg1 {
 
   background-image: url('/assets/img/jardineria.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 27px;
+   width: 80%;
+   height: 80%;
+}
+.bg2 {
+
+  background-image: url('/assets/img/arte.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 27px;
+  width: 80%;
+  height: 80%;
+}
+.bg3 {
+
+  background-image: url('/assets/img/gastronomia.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 27px;
+  width: 80%;
+  height: 80%;
+}
+.bg4 {
+
+  background-image: url('/assets/img/bienestar.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 27px;
+  width: 80%;
+  height: 80%;
+}
+.bg5 {
+
+  background-image: url('/assets/img/experiencias.png');
   background-repeat: no-repeat;
   background-position: center;
   padding: 27px;
