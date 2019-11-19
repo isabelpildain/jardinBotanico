@@ -5,23 +5,13 @@
       </ion-buttons>  
     <ion-title>Actividades</ion-title>
   </ion-toolbar>
+
 </ion-header>
 
 <ion-content>
-  <ion-card *ngFor="let cursos of itemscursos">
-
-    <h1 text-center><b>{{cursos.get('titulo')}}</b></h1>    
-    <ion-img [src]="cursos.get('imagen')"></ion-img>
     
-    <ion-card-content>
-      <h5>{{cursos.get('descripcion')}}</h5>
-      <br>
-      <h6> {{cursos.get('fechas')}}</h6>
-      <br>
-      <h6> {{cursos.get('lugar')}}</h6>
-          
-    </ion-card-content>
-    
-  </ion-card>
-
 </ion-content>
+
+
+
+
