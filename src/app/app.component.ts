@@ -18,7 +18,7 @@ export class AppComponent {
       icon: 'document'
     },
     {
-      title: 'Tarifas y Horarios',
+      title: 'Horarios',
       url: '/tarifas-horarios',
       icon: 'cash'
     },
@@ -34,7 +34,7 @@ export class AppComponent {
     },
     {
       title: 'Cerrar Sesion',
-      url: '/Cerrar Sesion',
+      url: 'exit()',
       icon: 'tablet-portrait'
     }
   ];
@@ -59,4 +59,5 @@ export class AppComponent {
       this.splashScreen.hide();
     });
   }
+  
 }

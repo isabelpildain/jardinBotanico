@@ -11,9 +11,11 @@
             <h2 class="ion-text-center">Jardin Botanico</h2>
         </ion-title>
     </ion-toolbar>
+
 </ion-header>
 
-<ion-content>
+<ion-content >   
+
     <ion-tabs>
 
         <ion-tab-bar slot="bottom">
@@ -30,12 +32,12 @@
 
             <ion-tab-button tab="tab3">
                 <ion-icon name="ios-flag"></ion-icon>
-                <ion-label>Actividades</ion-label>
+                <ion-label>Portafolio</ion-label>
             </ion-tab-button>
 
             <ion-tab-button tab="tab4">
                 <ion-icon name="cafe"></ion-icon>
-                <ion-label>Portafolio</ion-label>
+                <ion-label>Actividades</ion-label>
             </ion-tab-button>
 
             <ion-tab-button tab="plantas-scanner">
@@ -45,4 +47,7 @@
         </ion-tab-bar>
 
     </ion-tabs>
+    <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content pullingtext="Cargando Info..."></ion-refresher-content>
+    </ion-refresher>
 </ion-content>

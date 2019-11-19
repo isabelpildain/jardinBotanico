@@ -1,12 +1,9 @@
 <ion-content>
+
     <br>
     <ion-card-title class="ion-text-center" style="font-weight: bold; text-size:70pd">BIENVENIDOS</ion-card-title>
     <br>
-    <p class="ion-text-center">
-      El Jardín Botánico de Medellín es una fundación privada sin ánimo de lucro, que se ha convertido en un proyecto de ciudad con un objetivo claro: transformarse en un espacio de encuentro ciudadano, el lugar donde se investiga y se conserva la biodiversidad colombiana, que transforma al ser humano y su entorno a través de la educación y la cultura y por último, ser una organización con solidez institucional con el fin de contribuir a la sostenibilidad ambiental y social del planeta.
-    </p>
-    <br>
-    <img src="assets/img/entrada.jpg">
+    <img src="assets/img/verde.png">
     <br>
     <h2 class="ion-text-center">Mas de 46 Años de Historia!</h2>
     <p class="ion-text-center">
@@ -17,27 +14,35 @@
         Para lograr esto, orientamos nuestro quehacer en CUATRO EJES estratégicos que guían la labor y nos permite tener claros nuestros sueños.
 
     </p>
-    <p >........</p>
+    <hr>
 
-    <br>
-    <ion-card-title style="font-weight: bold">Noticias</ion-card-title>
-    <br>
-
+    
     <ion-card *ngFor="let objetosinicio of itemsInicio">
-    <ion-card-header>
-        <ion-img [src]="objetosinicio.get('imagen')"></ion-img>
-        <h6>{{objetosinicio.get('subtitulo')}}</h6>
-        <ion-card-title>{{objetosinicio.get('titulo')}}</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-        {{objetosinicio.get('hora')}}
-        <br>
-        {{objetosinicio.get('lugar')}}
-        <br>
-        {{objetosinicio.get('fecha')}}
-    </ion-card-content>
-  </ion-card>
+        <ion-card-title style="font-weight: bold" text-center>Noticias</ion-card-title>
+        <ion-card-header>
+            <ion-img [src]="objetosinicio.get('imagen')"></ion-img>
+            <h6>{{objetosinicio.get('subtitulo')}}</h6>
+            <ion-card-title>{{objetosinicio.get('titulo')}}</ion-card-title>
+            
+        </ion-card-header>
+        
+            <ion-card-content>         
+                
+                {{objetosinicio.get('hora')}}
+                <br>
+                {{objetosinicio.get('lugar')}}
+                <br>
+                {{objetosinicio.get('fecha')}}
+                <br>
+                <ion-button routerLink="/tab3"><ion-icon name="ios-leaf" ></ion-icon>Ver</ion-button>                                        
+                
+            </ion-card-content>
+                                    
+    </ion-card>
+   
 
   <br>
   <p class="ion-text-center">comunicaciones@jbotanico.org 4445500 ext.103/<br> Calle #73 51 D 14 Medellín, Colombia. www.botanicomedellin.org</p>
 </ion-content>
+
+
