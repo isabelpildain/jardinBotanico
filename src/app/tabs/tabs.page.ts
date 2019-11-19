@@ -49,4 +49,18 @@ export class TabsPage {
     this.menu.open('custom');
   }
 
+<<<<<<< HEAD
+=======
+}
+
+export class Refresher {
+  constructor() {}
+
+  doRefresh(event) {
+
+    setTimeout(() => {
+      event.target.complete();
+    }, 800);
+  }
+>>>>>>> cea4653a6f732f1c8fc3405bff526ef1cd425534
 }
