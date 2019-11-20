@@ -33,8 +33,8 @@ export class AppComponent {
       icon: 'bus'
     },
     {
-      title: 'Cerrar Sesion',
-      url: 'exit()',
+      title: 'Cerrar App',
+      url: '/destroy',
       icon: 'tablet-portrait'
     }
   ];

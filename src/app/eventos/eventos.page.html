@@ -8,17 +8,21 @@
 </ion-header>
 
 <ion-content>
-    <ion-card *ngFor="let eventos of itemseventos">
+  <ion-card *ngFor="let eventos of itemseventos">
+    <ion-card-header>
+      <ion-card-title class="info"><h1> {{eventos.get('titulo')}} </h1></ion-card-title>
+    </ion-card-header>
 
-        <h1 text-center><b>{{eventos.get('titulo')}}</b></h1>    
-        <ion-img [src]="eventos.get('imagen')"></ion-img>
-        
-        <ion-card-content>
-          
-          <h5>{{eventos.get('descripcion')}}</h5>
-              
-        </ion-card-content>
-        
-      </ion-card>
+    <ion-card-content>
+      <ion-img [src]="eventos.get('imagen')"></ion-img>
+      <br>
+      <p > {{eventos.get('descripcion')}} </p>    
+      <br> 
+      <ion-card-title class="info"><h1> Capacidad y montajes </h1>  </ion-card-title>
+      <br>
+      <ion-img [src]="eventos.get('capacidad_montaje')"></ion-img>
+    </ion-card-content>
+
+  </ion-card>
 
 </ion-content>

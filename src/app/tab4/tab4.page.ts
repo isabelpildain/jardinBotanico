@@ -4,7 +4,6 @@ import {ParseProviderService} from '../parse-provider.service';
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 
 
-
 @Component({
   selector: 'app-tab4',
   templateUrl: 'tab4.page.html',
