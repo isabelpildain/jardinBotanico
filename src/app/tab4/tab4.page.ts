@@ -13,9 +13,13 @@ import {InAppBrowser} from '@ionic-native/in-app-browser/ngx';
 export class Tab4Page {
 
   itemsServicios: ServicioInterface[] = [];
+ 
 
   constructor(private parseProvider: ParseProviderService, private iab: InAppBrowser) {
     this.listServicios();
+  }
+  openUrl(){
+    // this.browser.create('https://www.botanicomedellin.org/servicios/ciencia-y-biodiversidad/silvicultura-y-paisajismo/', '_self')
   }
 
   public listServicios(): Promise<any> {
@@ -33,4 +37,5 @@ export class Tab4Page {
   openUrl(){
     this.iab.create('https://yofasele.sirv.com/Images/jardinbotanico/Portafolios_digitales_JBM_2019_/Artes%20Portafolio%201%20Silvicultura%20y%20Paisajismo%20DIGITAL.pdf','_self')
   }
+
 }
