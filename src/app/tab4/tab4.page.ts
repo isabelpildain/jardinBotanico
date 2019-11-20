@@ -17,6 +17,7 @@ export class Tab4Page {
   constructor(private parseProvider: ParseProviderService, private iab: InAppBrowser) {
     this.listServicios();
   }
+ 
   public listServicios(): Promise<any> {
     const offset = this.itemsServicios.length;
     const limit = 10;

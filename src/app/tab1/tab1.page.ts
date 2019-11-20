@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 import { MenuController } from '@ionic/angular';
 import {inicioInterface} from '../../interfaces/inicioInterface'; 
 import {ParseProviderService} from '../parse-provider.service';
-
+import {Router} from '@angular/router'
+import { from } from 'rxjs';
 
 @Component({
   selector: 'app-tab1',
@@ -13,10 +14,11 @@ export class Tab1Page {
 
     itemsInicio: inicioInterface[] = [];
 
-    constructor(private parseProvider: ParseProviderService) {
+    constructor(private parseProvider: ParseProviderService, private router: Router) {
       this.listInicio();
     }
 
+   
     
 
     public listInicio(): Promise<any> {
@@ -30,6 +32,9 @@ export class Tab1Page {
         console.log(error);
       });
     }
+
+   
+
 
 }
 
