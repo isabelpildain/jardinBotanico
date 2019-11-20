@@ -101,7 +101,8 @@
       "cordova-plugin-googlemaps": {}
     },
     "platforms": [
-      "browser"
+      "browser",
+      "android"
     ]
   }
 }
