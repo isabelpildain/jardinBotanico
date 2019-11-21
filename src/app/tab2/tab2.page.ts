@@ -120,7 +120,7 @@ export class Tab2Page implements OnInit {
             }
         });
         htmlInfoWindow.setContent(frame, {
-            width: '250px'
+            width: '100px'
         });
 
         if (title) {
