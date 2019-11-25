@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { MenuController } from '@ionic/angular';
 import {InAppBrowser} from '@ionic-native/in-app-browser/ngx';
+import { Platform } from '@ionic/angular';
 
 
 @Component({
@@ -10,7 +11,21 @@ import {InAppBrowser} from '@ionic-native/in-app-browser/ngx';
 })
 export class TabsPage {
 
-  constructor(private menu: MenuController, private browser:InAppBrowser) {}
+  subscribe: any;
+
+  constructor(private menu: MenuController, private browser:InAppBrowser, public  Platform: Platform) {
+    
+    this.subscribe = this.Platform.backButton.subscribeWithPriority(666666, () =>
+    {
+      if(this.constructor.name == "tabs")
+      {
+        if(window.confirm("Deseas salir de la App"))
+        {
+          navigator["app"].exitApp();
+        }
+      }
+    })
+  }
   
  
   openUrl1(  ){    
