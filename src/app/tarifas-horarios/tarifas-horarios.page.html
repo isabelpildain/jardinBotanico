@@ -10,50 +10,100 @@
 <ion-content>
 
   <ion-card>
-
+    <img class="logo" src="assets/img/logojardin.png">
     <p text-center>
         El Jardín abre sus puertas de 9:00 a.m. a 4:30 p.m. en jornada continua, incluyendo fines de semana y días festivos. Excepto en eventos especiales.
     </p>
-    <h1 text-center style="font-weight: bold;">Restaurante In Situ</h1> 
-    <p class="titulos">
-       - Desayunos con previa reserva:
-    </p>
 
-    <p>lunes a sábado de 7a.m. a 10 a.m. / domingo y festivos 9 a.m. a 11 a.m.</p>
-
-    <p class="titulos">
-        - Picnics en el Jardín:
-      </p>
-
-      <p>lunes a domingo de 9 a.m. a 4 p.m.</p>
-
-      <p class="titulos">
-        - Almuerzos:
-        </p>
-
-      <p>lunes a viernes de 12 m a 3 p.m.; sábado de 12 m a 3:30 p.m.; domingo y festivos 12 m a 4 p.m.</p>
-
-      <p class="titulos">
-          - Cenas:
-        </p>
-
-        <p>jueves a sábado de 7 p.m. a 10 p.m. cuando se cierra la cocina, puede permanecer en el restaurante hasta las 11 p.m.</p>
-
-        <br>
-    
-        <h3 text-center style="font-weight: bold;">¿Tiene algún valor la entrada al jardín?</h3> 
-
-      <p>
-          Gracias al programa de Formación de Públicos de la <ion-text color="primary"  style="font-weight: bold;" >Alcaldía de Medellín,</ion-text>  el Jardín Botánico puede disfrutarse en forma 
-        <ion-text color="secondary" style="font-weight: bold;" >GRATUITA. </ion-text>
-      </p>
-
-
-      <ion-card>
-      <p>A nuestros caminantes les recordamos que el ingreso es a partir de las 6:30 a.m. Nos preocupa la seguridad de todos y debemos evitar la circulación compartida de peatones y carros (éstos últimos ingresan entre las 6:00 a.m. y las 8:00 a.m.)
-        </p>
+    <ion-card>   
+      <div style="text-align:center;">
+        <table border="5" style="margin: 0 auto;">
+          <tr id="titulo">
+            <th scope="col"> Restaurantes </th>
+            <th scope="col"> Restaurante In Situ </th>
+            <th scope="col"> Pinic del Jardín </th>
+          </tr>
+          <tr>
+            <td><b>Horarios</b></td>
+            <td><p>lunes a sábado de 7a.m. a 10 a.m. / domingo 9 a.m. a 11 a.m.</p></td>
+            <td><p>lunes a domingo de 9 a.m. a 4 p.m.</p></td>
+          </tr>
+          <tr>
+            <td><b>Almuerzos</b></td>
+            <td><p>lunes a viernes de 12 m a 3 p.m.; sábado de 12 m a 3:30 p.m.; domingo y festivos 12 m a 4 p.m.</p></td>
+            <td>Festivos 9 a.m. a 11 a.m.</td>
+          </tr>
+          <tr>
+            <td><b>Cenas</b></td>
+            <td><p>jueves a sábado de 7 p.m. a 10 p.m. cuando se cierra la cocina, puede permanecer en el restaurante hasta las 11 p.m.</p></td>
+            <td>Festivos 9 a.m. a 11 a.m.</td>
+          </tr>
+          <tr>
+            <td><b>Tarifas</b></td>
+            <td><p>Tarifas Sujetos Por Menu de Cada Restaurante</p></td>
+            <td>Tarifas Sujetos Por Menu de Cada Restaurante</td>
+          </tr>
+        </table>  
+      </div>
     </ion-card>
-
+    
+    <h1 text-center><b>Picnic en el Jardín:</b></h1>
+    <ion-slides pager="true">
+      <ion-slide>
+        <img src="./assets/img/PICNIC1.PNG" alt="jardin_botanico">
+      </ion-slide>
+      <ion-slide>
+        <img src="./assets/img/PICNIC.PNG" alt="jardin_botanico">              
+      </ion-slide>
+    </ion-slides>
+  
+      <!-- <h1 text-center style="font-weight: bold;"><b></b> </h1>  -->
+      <ion-card-header>
+        <ion-card-title class="titulos">
+          <h1 text-center><b>Restaurante In Situ</b></h1>
+        </ion-card-title>
+        <br>
+  
+        <ion-slides pager="true">
+          <ion-slide>
+            <img src="/assets/img/restaurante_IN_SITU.PNG">
+          </ion-slide>
+          <ion-slide>
+            <img src="/assets/img/restaurante_IN_SITU2.PNG">
+          </ion-slide>
+          <ion-slide>
+            <img src="/assets/img/restaurante_IN_SITU3.PNG">
+          </ion-slide>
+          <ion-slide>
+            <img src="/assets/img/restaurante_IN_SITU4.PNG">
+          </ion-slide>
+          <ion-slide>
+            <img src="/assets/img/restaurante_IN_SITU5.PNG">
+          </ion-slide>
+          </ion-slides>  
+      </ion-card-header>
+    
+            
+      <h1 text-center style="font-weight: bold;">¿Tiene algún valor la entrada al jardín?</h1> 
+      <p><b text-center>
+        <ion-card-content >
+        <img src="./assets/img/JARDIN_BOTANICO.PNG" alt="jardin_botanico">
+        </ion-card-content>
+        Gracias al programa de Formación de Públicos de la <ion-text color="primary"  style="font-weight: bold;" >Alcaldía de Medellín,</ion-text>  
+        el Jardín Botánico puede disfrutarse en forma 
+        <ion-text color="secondary" style="font-weight: bold;" >GRATUITA. </ion-text>
+      </b></p>
+        
+      <ion-card>
+        <table border=5 style="margin: 0 auto;">
+          <p>
+            <i text-center>A nuestros caminantes les recordamos que el ingreso es a partir de las 6:30 a.m.
+              Nos preocupa la seguridad de todos y debemos evitar la circulación compartida de peatones y carros 
+              (éstos últimos ingresan entre las 6:00 a.m. y las 8:00 a.m. 
+            </i>
+          </p>
+        </table>
+      </ion-card>
 
     </ion-card>
 </ion-content>

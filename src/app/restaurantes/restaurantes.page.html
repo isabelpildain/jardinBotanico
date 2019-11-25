@@ -11,9 +11,9 @@
 
   <ion-card *ngFor="let restaurantes of itemsrestaurantes">
 
-    <ion-label>{{restaurantes.get('titulo')}}</ion-label>
+    <h1 text-center><b>{{restaurantes.get('titulo')}}</b></h1>    
     <ion-img [src]="restaurantes.get('imagen')"></ion-img>
-
+   
     <ion-card-content>
       <h5>{{restaurantes.get('descripcion')}}</h5>
       <h5>Platos:</h5>
@@ -23,6 +23,5 @@
     </ion-card-content>
     
   </ion-card>
-
 
 </ion-content>

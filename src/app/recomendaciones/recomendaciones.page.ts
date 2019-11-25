@@ -34,7 +34,7 @@ export class RecomendacionesPage implements OnInit {
 
   openUrl(){
    
-    this.iab.create('http://www.posgrado.unam.mx/filosofiadelaciencia/media/uploaded_files/2012/04/guia_digit_conacyt.pdf','_self')
+    this.iab.create('https://yofasele.sirv.com/Images/jardinbotanico/Portafolios_digitales_JBM_2019_/politicas_Jardin_botanico2.pdf','_self')
   }
 
 

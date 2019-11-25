@@ -18,7 +18,7 @@ export class AppComponent {
       icon: 'document'
     },
     {
-      title: 'Tarifas y Horarios',
+      title: 'Horarios',
       url: '/tarifas-horarios',
       icon: 'cash'
     },
@@ -31,18 +31,13 @@ export class AppComponent {
       title: 'Recomendaciones',
       url: '/recomendaciones',
       icon: 'bus'
-    },
-    {
-      title: 'Cerrar Sesion',
-      url: '/Cerrar Sesion',
-      icon: 'tablet-portrait'
     }
   ];
 
   constructor(
-    private platform: Platform,
-    private splashScreen: SplashScreen,
-    private statusBar: StatusBar
+      private platform: Platform,
+      private splashScreen: SplashScreen,
+      private statusBar: StatusBar
   ) {
     this.initializeApp();
   }

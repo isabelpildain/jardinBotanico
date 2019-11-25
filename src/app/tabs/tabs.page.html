@@ -5,7 +5,7 @@
             <ion-menu-button></ion-menu-button>
         </ion-buttons>
         <ion-thumbnail slot="start">
-          <ion-img src="/assets/icon/logo.png"></ion-img>
+            <ion-img src="/assets/icon/logo.png"></ion-img>
         </ion-thumbnail>
         <ion-title>
             <h2 class="ion-text-center">Jardin Botanico</h2>
@@ -14,7 +14,21 @@
 
 </ion-header>
 
-<ion-content >
+<ion-content> 
+    
+    <ion-fab vertical="top" horizontal="end" slot="fixed">
+        <ion-fab-button>
+            <ion-icon name="at"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-list side="bottom">
+            <ion-fab-button (click)="openUrl1()"><ion-icon class="ic1" name="logo-facebook"></ion-icon></ion-fab-button>
+            <ion-fab-button (click)="openUrl2()"><ion-icon class="ic2" name="logo-instagram"></ion-icon></ion-fab-button>
+            <ion-fab-button (click)="openUrl3()"><ion-icon class="ic3" name="logo-linkedin"></ion-icon></ion-fab-button>
+            <ion-fab-button (click)="openUrl4()"><ion-icon class="ic4" name="logo-twitter"></ion-icon></ion-fab-button>            
+            <ion-fab-button (click)="openUrl5()"><ion-icon class="ic6" name="logo-youtube"></ion-icon></ion-fab-button>
+        </ion-fab-list>        
+    </ion-fab>
+
     <ion-tabs>
 
         <ion-tab-bar slot="bottom">
@@ -31,12 +45,12 @@
 
             <ion-tab-button tab="tab3">
                 <ion-icon name="ios-flag"></ion-icon>
-                <ion-label>Actividades</ion-label>
+                <ion-label>Portafolio</ion-label>
             </ion-tab-button>
 
             <ion-tab-button tab="tab4">
                 <ion-icon name="cafe"></ion-icon>
-                <ion-label>Portafolio</ion-label>
+                <ion-label>Actividades</ion-label>
             </ion-tab-button>
 
             <ion-tab-button tab="plantas-scanner">
@@ -46,4 +60,8 @@
         </ion-tab-bar>
 
     </ion-tabs>
+
+    <!-- <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)"> -->
+        <!-- <ion-refresher-content pullingtext="Cargando Info..."></ion-refresher-content> -->
+    <!-- </ion-refresher> -->
 </ion-content>

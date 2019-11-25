@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import {ServicioInterface} from '../../interfaces/ServicioInterface';
 import {ParseProviderService} from '../parse-provider.service';
+import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
+
 
 @Component({
   selector: 'app-tab4',
@@ -10,11 +12,12 @@ import {ParseProviderService} from '../parse-provider.service';
 export class Tab4Page {
 
   itemsServicios: ServicioInterface[] = [];
+ 
 
-  constructor(private parseProvider: ParseProviderService) {
+  constructor(private parseProvider: ParseProviderService, private iab: InAppBrowser) {
     this.listServicios();
   }
-
+ 
   public listServicios(): Promise<any> {
     const offset = this.itemsServicios.length;
     const limit = 10;
@@ -26,4 +29,9 @@ export class Tab4Page {
       console.log(error);
     });
   }
+  
+  openUrl(){
+    this.iab.create('https://yofasele.sirv.com/Images/jardinbotanico/Portafolios_digitales_JBM_2019_/Artes%20Portafolio%201%20Silvicultura%20y%20Paisajismo%20DIGITAL.pdf','_self')
+  }
+
 }
