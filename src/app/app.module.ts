@@ -16,6 +16,11 @@ import {FileTransfer} from '@ionic-native/file-transfer/ngx';
 import {DocumentViewer} from '@ionic-native/document-viewer/ngx';
 
 import {InAppBrowser} from '@ionic-native/in-app-browser/ngx';
+import { Platform } from '@ionic/angular';
+import { from } from 'rxjs';
+
+
+
 
 @NgModule({
   declarations: [AppComponent],
@@ -35,4 +40,9 @@ import {InAppBrowser} from '@ionic-native/in-app-browser/ngx';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule {
+  
+  
+
+  constructor(public  Platform: Platform) {}
+}

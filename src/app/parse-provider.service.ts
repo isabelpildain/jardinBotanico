@@ -9,6 +9,8 @@ import {institucionalInterface} from '../interfaces/institucionalInterface';
 import {restauranteInterface} from '../interfaces/restauranteInterface';
 import {cursosInterface} from '../interfaces/cursosInterface';
 import {eventosInterface} from '../interfaces/eventosInterface';
+import {loginInterface} from '../interfaces/loginInterface';
+
 
 
 
@@ -162,6 +164,7 @@ export class ParseProviderService {
             }, 500);
         });
     }
+    
 
    
 

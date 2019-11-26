@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar color="primary">
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="/"></ion-back-button>
+      <ion-back-button defaultHref="/tabs/tab3"></ion-back-button>
     </ion-buttons>    
     <ion-title class="ion-text-center">Inicio de Sesion</ion-title>
   </ion-toolbar>
@@ -10,22 +10,30 @@
 
 
 <ion-content>
-  <ion-list>
+
+    <h4 text-center margin-top>Ingreso de Usuario</h4>
+
     <ion-item>
-      <ion-label>Pepperoni</ion-label>
-      <ion-toggle [(ngModel)]="pepperoni"></ion-toggle>
+      <ion-label stacked>Email</ion-label>
+      <ion-input [(ngModel)]="username"></ion-input>
     </ion-item>
   
     <ion-item>
-      <ion-label>Sausage</ion-label>
-      <ion-toggle [(ngModel)]="sausage" disabled="true"></ion-toggle>
+      <ion-label stacked>Contraseña</ion-label>
+      <ion-input type="password" [(ngModel)]="password"></ion-input>
     </ion-item>
+    <br>
+
+    <div text-center>
+      <ion-button ion-button margin-right (click)="signUp()">Ingresar</ion-button>      
+      <ion-button ion-button color="secondary" routerLink="/registro" >Registrarse</ion-button>
+    </div>
+
+    
+
+
+    
   
-    <ion-item>
-      <ion-label>Mushrooms</ion-label>
-      <ion-toggle [(ngModel)]="mushrooms"></ion-toggle>
-    </ion-item>
-  </ion-list>
 
 
 </ion-content>
