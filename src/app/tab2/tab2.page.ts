@@ -103,6 +103,7 @@ export class Tab2Page implements OnInit {
           <div class="flipper">
             <div class="front">
             <h3>` + title + `</h3>
+            
             <img src="` + photo + `" style="width: auto; height: auto">
           </div>
           <div class="back">
@@ -120,8 +121,8 @@ export class Tab2Page implements OnInit {
             }
         });
         htmlInfoWindow.setContent(frame, {
-            width: '250px',
-            height: '450px'
+            width: '100px',
+            height: '100px'
         });
 
         if (title) {
