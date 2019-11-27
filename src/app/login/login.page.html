@@ -13,16 +13,19 @@
 
     <h4 text-center margin-top>Ingreso de Usuario</h4>
 
-    <ion-item>
-      <ion-label stacked>Email</ion-label>
-      <ion-input [(ngModel)]="username"></ion-input>
-    </ion-item>
-  
-    <ion-item>
-      <ion-label stacked>Contraseña</ion-label>
-      <ion-input type="password" [(ngModel)]="password"></ion-input>
-    </ion-item>
-    <br>
+    <ion-list *ngFor="let portafolios of itemsportafolios">
+      <ion-item>
+        <ion-label stacked>Email</ion-label>
+        <ion-input [(ngModel)]="username"></ion-input>
+      </ion-item>
+    
+      <ion-item>
+        <ion-label stacked>Contraseña</ion-label>
+        <ion-input type="password" [(ngModel)]="password"></ion-input>
+      </ion-item>
+      
+      <br>
+    </ion-list>
 
     <div text-center>
       <ion-button ion-button margin-right (click)="signUp()">Ingresar</ion-button>      
@@ -30,10 +33,5 @@
     </div>
 
     
-
-
-    
-  
-
 
 </ion-content>
