@@ -3,6 +3,7 @@ import { Environment } from '@ionic-native/google-maps/ngx';
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
+import { timer } from 'rxjs';
 
 
 @Component({
@@ -36,6 +37,8 @@ export class AppComponent {
     }
   ];
 
+  showSplash = true;
+
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
@@ -55,6 +58,8 @@ export class AppComponent {
 
       this.statusBar.styleDefault();
       this.splashScreen.hide();
+
+      timer(3000).subscribe(() => this.showSplash = false)
     });
   }
 }

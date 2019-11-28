@@ -17,6 +17,7 @@
         <ion-card-content>
             {{item.descripcion}}
             <br>
+            <ion-img [src]="item.get('imagen')"></ion-img>
             <br>
             {{item.lugar}}
             <br>
@@ -26,7 +27,7 @@
             <br>
             <br>
             <ion-button slot="end" routerLink="/login">
-                <ion-icon name="exit"></ion-icon>Registrarse
+                <ion-icon name="exit"></ion-icon>Inscribirse
             </ion-button>
         </ion-card-content>
     </ion-card>
