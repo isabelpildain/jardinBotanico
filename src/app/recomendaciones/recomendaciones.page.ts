@@ -24,7 +24,7 @@ export class RecomendacionesPage implements OnInit {
 
   openLocalPdf(){
 
-    let url=encodeURIComponent('http://www.posgrado.unam.mx/filosofiadelaciencia/media/uploaded_files/2012/04/guia_digit_conacyt.pdf');
+    let url=encodeURIComponent('https://yofasele.sirv.com/Images/jardinbotanico/Portafolios_digitales_JBM_2019_/politicas_Jardin_botanico2.pdf');
     this.iab.create('https://docs.google.com/viewer?url='+url);
 
     

@@ -31,7 +31,8 @@ export class Tab4Page {
   }
   
   openUrl(){
-    this.iab.create('https://yofasele.sirv.com/Images/jardinbotanico/Portafolios_digitales_JBM_2019_/Artes%20Portafolio%201%20Silvicultura%20y%20Paisajismo%20DIGITAL.pdf','_self')
+    let url=encodeURIComponent('https://yofasele.sirv.com/Images/jardinbotanico/Portafolios_digitales_JBM_2019_/Artes%20Portafolio%201%20Silvicultura%20y%20Paisajismo%20DIGITAL.pdf');
+    this.iab.create('https://docs.google.com/viewer?url='+url);
   }
 
 }
