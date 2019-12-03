@@ -5,4 +5,6 @@ export interface PortafolioInterface {
     hora: string;
     valor: string;
     lugar: string;
+    imagen: string;
+    imagen2: string;
 }

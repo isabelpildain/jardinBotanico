@@ -17,7 +17,8 @@ const routes: Routes = [
   { path: 'plantas-view', loadChildren: './plantas-view/plantas-view.module#PlantasViewPageModule' },
   { path: 'portafolio-vista', loadChildren: './portafolio-vista/portafolio-vista.module#PortafolioVistaPageModule' },
   { path: 'recomendaciones', loadChildren: './recomendaciones/recomendaciones.module#RecomendacionesPageModule' },
-  { path: 'cursos', loadChildren: './cursos/cursos.module#CursosPageModule' }
+  { path: 'cursos', loadChildren: './cursos/cursos.module#CursosPageModule' },  { path: 'registro', loadChildren: './registro/registro.module#RegistroPageModule' }
+
   
 
 

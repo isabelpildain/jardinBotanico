@@ -9,6 +9,10 @@ import {institucionalInterface} from '../interfaces/institucionalInterface';
 import {restauranteInterface} from '../interfaces/restauranteInterface';
 import {cursosInterface} from '../interfaces/cursosInterface';
 import {eventosInterface} from '../interfaces/eventosInterface';
+import {usuarioInterface} from '../interfaces/usuarioInterface';
+import { resolve } from 'url';
+import { reject } from 'q';
+
 
 
 
@@ -163,7 +167,23 @@ export class ParseProviderService {
         });
     }
 
-   
+    public getlogin (email: String, password: String) {
+
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                const usuario: usuarioInterface[] = Parse.Object.extend('usuarios');
+                const query = new Parse.Query(usuario);
+                query.equalTo('email',email);
+                query.first().then((itemslogin) => {
+                    resolve(itemslogin);
+                }, (error) => {
+                    reject(error);
+                });
+            }, 500);
+        });
+
+    }
+    
 
     private parseInitialize() {
         Parse.initialize(this.parseAppId);

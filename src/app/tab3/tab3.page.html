@@ -1,22 +1,21 @@
 <ion-content>
-    <ion-card>
-        <img src="assets/img/libro.jpg">
+     <!-- <ion-card> -->
+        <img src="assets/img/carpeta.png">
         <ion-card-content class="ion-text-center">
-            <b>
-            Bienvenidos a Nuestro Portafolio de Actividades, Aca Podras Encontrar diferentes Talleres y Cursos que en Compañia de Tus Familiares Podras Disfrutar. Solo tienes que Inscribirte!
-            </b>
         </ion-card-content>
-    </ion-card>
+     <!-- </ion-card> -->
 
     <ion-card *ngFor="let item of itemsPortafolios">    
         <ion-item>
             <ion-icon name="paper" slot="start"></ion-icon>
             <ion-label>{{item.get('titulo')}}</ion-label>
-            <ion-button (click)="enviarPortafolioVista(item)"><ion-icon name="ios-leaf" ></ion-icon>Ver</ion-button>
+            <ion-button routerLink="/login"><ion-icon name="ios-leaf" ></ion-icon>Inscribirse</ion-button>
             <!-- <ion-button fill="outline" slot="end" >Ver</ion-button> -->
         </ion-item>
         <ion-card-content>
             {{item.get('descripcion')}}
+            <br>
+            <ion-img [src]="item.get('imagen')"></ion-img>
         </ion-card-content>
         <ion-card-content>
             {{item.get('hora')}}

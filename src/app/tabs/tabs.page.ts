@@ -11,20 +11,7 @@ import { Platform } from '@ionic/angular';
 })
 export class TabsPage {
 
-  subscribe: any;
-
-  constructor(private menu: MenuController, private browser:InAppBrowser, public  Platform: Platform) {
-    
-    this.subscribe = this.Platform.backButton.subscribeWithPriority(666666, () =>
-    {
-      if(this.constructor.name == "tabs")
-      {
-        if(window.confirm("Deseas salir de la App"))
-        {
-          navigator["app"].exitApp();
-        }
-      }
-    })
+  constructor(private menu: MenuController, private browser:InAppBrowser) {
   }
   
  
