@@ -64,7 +64,11 @@ export class AppComponent {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
 
+<<<<<<< HEAD
       timer(1000).subscribe(() => this.showSplash = false)
+=======
+      timer(2000).subscribe(() => this.showSplash = false)
+>>>>>>> c3af09f08398db579335b7fd81c18b14914d6649
 
       Environment.setEnv({
         'API_KEY_FOR_BROWSER_RELEASE': 'AIzaSyDGODufigYaWvP-Lg2nmzoRkKd3QbqUsR0',
