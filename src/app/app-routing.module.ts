@@ -17,7 +17,10 @@ const routes: Routes = [
   { path: 'plantas-view', loadChildren: './plantas-view/plantas-view.module#PlantasViewPageModule' },
   { path: 'portafolio-vista', loadChildren: './portafolio-vista/portafolio-vista.module#PortafolioVistaPageModule' },
   { path: 'recomendaciones', loadChildren: './recomendaciones/recomendaciones.module#RecomendacionesPageModule' },
-  { path: 'cursos', loadChildren: './cursos/cursos.module#CursosPageModule' },  { path: 'registro', loadChildren: './registro/registro.module#RegistroPageModule' }
+  { path: 'cursos', loadChildren: './cursos/cursos.module#CursosPageModule' },  { path: 'registro', loadChildren: './registro/registro.module#RegistroPageModule' },
+  { path: 'silvicultura', loadChildren: './silvicultura/silvicultura.module#SilviculturaPageModule' },
+  { path: 'mercadeo', loadChildren: './mercadeo/mercadeo.module#MercadeoPageModule' },
+  { path: 'investigacion', loadChildren: './investigacion/investigacion.module#InvestigacionPageModule' }
 
   
 

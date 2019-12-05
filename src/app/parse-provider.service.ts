@@ -10,8 +10,6 @@ import {restauranteInterface} from '../interfaces/restauranteInterface';
 import {cursosInterface} from '../interfaces/cursosInterface';
 import {eventosInterface} from '../interfaces/eventosInterface';
 import {usuarioInterface} from '../interfaces/usuarioInterface';
-import { resolve } from 'url';
-import { reject } from 'q';
 
 
 
@@ -76,7 +74,7 @@ export class ParseProviderService {
     public getItemsInicio(offset: number = 0, limit: number = 3): Promise<any> {
         return new Promise((resolve, reject) => {
             setTimeout(() => {
-                const objetosinicio: inicioInterface[] = Parse.Object.extend('objetosinicio');
+                const objetosinicio: inicioInterface[] = Parse.Object.extend('Noticias');
                 const query = new Parse.Query(objetosinicio);
                 query.skip(offset);
                 query.limit(limit);

@@ -1,8 +1,7 @@
 export interface inicioInterface {
-    titulo: string;
     imagen: string;
-    subtitulo: string;
-    hora: string;
-    fecha: string;
-    lugar: string;
+    imagen2: string;
+    imagen3: string;
+    imagen4: string;
+    imagen5: string;
 }

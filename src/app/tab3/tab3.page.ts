@@ -2,6 +2,8 @@ import {Component, NgZone} from '@angular/core';
 import {ParseProviderService} from '../parse-provider.service';
 import {PortafolioInterface} from '../../interfaces/PortafolioInterface';
 import {NavigationExtras, Router} from '@angular/router';
+import {InAppBrowser} from '@ionic-native/in-app-browser/ngx';
+
 
 @Component({
     selector: 'app-tab3',
@@ -12,9 +14,13 @@ export class Tab3Page {
 
   itemsPortafolios: PortafolioInterface[]  = [];
 
-    constructor(private parseProvider: ParseProviderService, private route: Router, private ngZone: NgZone) {
+    constructor(private parseProvider: ParseProviderService, private route: Router, private ngZone: NgZone, private browser:InAppBrowser) {
       this.listPortafolio();
     }
+
+    openUrl(  ){    
+        this.browser.create('https://www.botanicomedellin.org/','_self')
+      }
 
     public listPortafolio(): Promise<any> {
         const offset = this.itemsPortafolios.length;
@@ -38,3 +44,5 @@ export class Tab3Page {
     }
 
 }
+
+

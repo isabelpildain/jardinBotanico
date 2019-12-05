@@ -3,7 +3,6 @@ import { MenuController } from '@ionic/angular';
 import {inicioInterface} from '../../interfaces/inicioInterface'; 
 import {ParseProviderService} from '../parse-provider.service';
 import {Router} from '@angular/router'
-import { from } from 'rxjs';
 
 @Component({
   selector: 'app-tab1',
@@ -18,7 +17,6 @@ export class Tab1Page {
       this.listInicio();
     }
 
-   
     
 
     public listInicio(): Promise<any> {

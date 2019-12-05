@@ -1,10 +1,10 @@
 <ion-header>
 
     <ion-toolbar color="primary">
-        <ion-buttons slot="end">
+        <ion-buttons slot="start">
             <ion-menu-button></ion-menu-button>
         </ion-buttons>
-        <ion-thumbnail slot="start">
+        <ion-thumbnail slot="end">
             <ion-img src="/assets/icon/logo.png"></ion-img>
         </ion-thumbnail>
         <ion-title>
@@ -18,7 +18,7 @@
     
     <ion-fab vertical="top" horizontal="end" slot="fixed">
         <ion-fab-button>
-            <ion-icon name="at"></ion-icon>
+            <ion-icon name="md-eye"></ion-icon>
         </ion-fab-button>
         <ion-fab-list side="bottom">
             <ion-fab-button (click)="openUrl1()"><ion-icon class="ic1" name="logo-facebook"></ion-icon></ion-fab-button>
@@ -45,12 +45,12 @@
 
             <ion-tab-button tab="tab3">
                 <ion-icon name="ios-flag"></ion-icon>
-                <ion-label>Portafolio</ion-label>
+                <ion-label>Actividades</ion-label>
             </ion-tab-button>
 
             <ion-tab-button tab="tab4">
                 <ion-icon name="cafe"></ion-icon>
-                <ion-label>Actividades</ion-label>
+                <ion-label>Portafolio</ion-label>
             </ion-tab-button>
 
             <ion-tab-button tab="plantas-scanner">

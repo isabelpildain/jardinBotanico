@@ -1,55 +1,72 @@
 <ion-content>
 
-    
-<ion-content>
-        
 
-    <br>
-    <ion-card-title class="ion-text-center" style="font-weight: bold; text-size:70pd">BIENVENIDOS</ion-card-title>
-    <br>
-    <p text-center padding class="parrafo">
-        El Jardín Botánico de Medellín es una fundación privada sin ánimo de lucro, que se ha convertido en un proyecto de ciudad con un objetivo claro: transformarse en un espacio de encuentro ciudadano, el lugar donde se investiga y se conserva la biodiversidad colombiana, que transforma al ser humano y su entorno a través de la educación y la cultura y por último, ser una organización con solidez institucional con el fin de contribuir a la sostenibilidad ambiental y social del planeta.
-        
-    </p>
-    <!--  -->
-    <h2 class="ion-text-center">Mas de 46 Años de Historia!</h2>
-    <p class="ion-text-center" padding class="parrafo">
-        Nuestra misión busca convertirnos en un escenario que fortalece la relación del ser humano con el entorno natural, pero también pensamos en el futuro. Por esta razón, en 2020 nos vemos como una institución líder en la trasformación de realidades.
-    </p>
-    <p class="ion-text-center" padding class="parrafo">
-        Para lograr esto, orientamos nuestro quehacer en CUATRO EJES estratégicos que guían la labor y nos permite tener claros nuestros sueños.
+    <ion-content>
+        <ion-card>
+            <!-- <h1 text-center style="font-weight: bold; text-size: 30px;">Bienvenidos</h1> -->
+            <ion-card-header>
 
-    </p>
-    <hr>
+                <iframe height="200pd" width="300pd"
+                    src="https://yofasele.sirv.com/Images/jardinbotanico/desde%20el%20aire.mp4" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
+                <ion-card-title>
+                    <h1 class="ion-text-center" padding class="parrafo" text-center><b>¡Somos amigos, somos compañeros,
+                            somos un equipo!</b></h1>
+                </ion-card-title>
+            </ion-card-header>
 
-    
-    <ion-card *ngFor="let objetosinicio of itemsInicio" class="fondo">
-        <ion-card-title style="font-weight: bold" text-center>Noticias</ion-card-title>
-        <ion-card-header>
-            <ion-img [src]="objetosinicio.get('imagen')"></ion-img>
-            <h6>{{objetosinicio.get('subtitulo')}}</h6>
-            <ion-card-title>{{objetosinicio.get('titulo')}}</ion-card-title>
-            
-        </ion-card-header>
-        
-            <ion-card-content>         
-                
-                {{objetosinicio.get('hora')}}
-                <br>
-                {{objetosinicio.get('lugar')}}
-                <br>
-                {{objetosinicio.get('fecha')}}
-                <br>
-                <ion-button [href]="'/tabs/tab3'"><ion-icon name="ios-leaf" ></ion-icon>Ver</ion-button>                                        
-                
+        </ion-card>
+
+        <h1 class="ion-text-center">Mas de 46 Años de Historia!</h1>
+        <br>
+        <ion-card-title style="font-weight: bold" text-center>Mision</ion-card-title>
+        <p class="ion-text-center" padding class="parrafo" text-center>
+            Creamos experiencias de encuentro y convivencia para la ciudad, integradas a estrategias de investigación,
+            conservación,
+            educación y cultura asociadas a la biodiversidad y a la relación del ser humano con el entorno natural.
+        </p>
+        <ion-card-title style="font-weight: bold" text-center>Vision</ion-card-title>
+        <p class="ion-text-center" padding class="parrafo" text-center>
+            En el 2020, El Jardin Botanico "Joaquin Antonio Uribe" de Medellín sera reconocido como institucion lider
+            en la transformacion de la Ciudad, promoviendo
+            experiencias y escenarios vivos de educacion, que propicien cambios positivos frente a la relacion de las
+            personas con el entorno en le marco de un desarrollo sostenible.
+        </p>
+
+        <hr>
+
+
+        <ion-card>
+            <ion-card-title style="font-weight: bold" text-center>Noticias</ion-card-title>
+            <br>
+
+            <ion-slides padding pager="true">
+                <ion-slide *ngFor="let Noticias of itemsInicio" class="fondo">
+                    <ion-img [src]="Noticias.get('imagen')"></ion-img>
+                </ion-slide>
+            </ion-slides>
+
+            <ion-card-content>
+                <ion-button [href]="'/tabs/tab3'">
+                    <ion-icon name="ios-leaf"></ion-icon>Ver
+                </ion-button>
             </ion-card-content>
-                                    
-    </ion-card>
-    <br>
-      
-
-    <br>
-    <p class="ion-text-center">comunicaciones@jbotanico.org 4445500 ext.103/<br> Calle #73 51 D 14 Medellín, Colombia. www.botanicomedellin.org</p>
-</ion-content>
+        </ion-card>
 
 
+        <br>
+        <img src="./assets/img/sura.png">
+        <img src="./assets/img/GrupoArgos.jpg" height="120pd" width="360pd">
+        <br>
+        <br>
+        <br>
+        <br>
+        <img src="./assets/img/pintuco.jpg" height="200pd" width="360pd">
+        <img src="./assets/img/alcadia.jpg" height="200pd" width="360pd">
+
+
+        <br>
+        <p class="ion-text-center">comunicaciones@jbotanico.org 4445500 ext.103/<br> Calle #73 51 D 14 Medellín,
+            Colombia. www.botanicomedellin.org</p>
+    </ion-content>

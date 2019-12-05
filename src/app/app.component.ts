@@ -16,14 +16,14 @@ export class AppComponent {
 
   public appPages = [
     {
-      title: 'Institucional',
+      title: 'Que hacer en el Jardin?',
       url: '/institucional',
-      icon: 'document'
+      icon: 'md-cloudy-night'
     },
     {
       title: 'Horarios',
       url: '/tarifas-horarios',
-      icon: 'cash'
+      icon: 'md-clock'
     },
     {
       title: 'Parqueadero',
@@ -33,7 +33,17 @@ export class AppComponent {
     {
       title: 'Recomendaciones',
       url: '/recomendaciones',
-      icon: 'bus'
+      icon: 'md-checkmark-circle'
+    },
+    {
+      title: 'Restaurantes',
+      url: '/restaurantes',
+      icon: 'md-beer'
+    },
+    {
+      title: 'Espacios para eventos',
+      url: '/eventos',
+      icon: 'ios-contacts'
     }
   ];
 
@@ -51,10 +61,18 @@ export class AppComponent {
   initializeApp() {
     this.platform.ready().then(() => {
 
+      this.statusBar.styleDefault();
+      this.splashScreen.hide();
+
+      timer(1000).subscribe(() => this.showSplash = false)
+
       Environment.setEnv({
         'API_KEY_FOR_BROWSER_RELEASE': 'AIzaSyDGODufigYaWvP-Lg2nmzoRkKd3QbqUsR0',
         'API_KEY_FOR_BROWSER_DEBUG': 'AIzaSyDGODufigYaWvP-Lg2nmzoRkKd3QbqUsR0'
       });
+
+      this.statusBar.styleDefault();
+      this.splashScreen.hide();
     });
   }
 }
