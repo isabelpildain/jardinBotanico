@@ -18,8 +18,8 @@ export class Tab3Page {
       this.listPortafolio();
     }
 
-    openUrl(  ){    
-        this.browser.create('https://www.botanicomedellin.org/','_self')
+    openUrl(item:any){    
+        this.browser.create(item.get('url'))
       }
 
     public listPortafolio(): Promise<any> {
