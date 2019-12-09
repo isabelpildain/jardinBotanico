@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import{ InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 
 @Component({
   selector: 'app-silvicultura',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SilviculturaPage implements OnInit {
 
-  constructor() { }
+  constructor(private iab:InAppBrowser) { }
 
   ngOnInit() {
   }
+
+  openUrl(){    
+  
+    this.iab.create('https://www.botanicomedellin.org' ,'_self')
+  }
+
 
 }

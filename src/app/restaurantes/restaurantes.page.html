@@ -1,27 +1,37 @@
 <ion-header>
   <ion-toolbar color="primary">
-      <ion-buttons slot="start">
-        <ion-back-button defaultHref="/"></ion-back-button>
-      </ion-buttons>  
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
     <ion-title>Restaurantes</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-card>
+    <ion-card-title text-center color="danger" style="font-style: unset;">
+      <br>
+      <p>
+        Tenemos ofertas variadas para que disfrutes
+        tu estadia y siempre descubras un nuevo sabor
+      </p>
+      <br>
+    </ion-card-title>
+  </ion-card>
 
   <ion-card *ngFor="let restaurantes of itemsrestaurantes">
 
-    <h1 text-center><b>{{restaurantes.get('titulo')}}</b></h1>    
+    <h1 text-center><b>{{restaurantes.get('titulo')}}</b></h1>
     <ion-img [src]="restaurantes.get('imagen')"></ion-img>
-   
+
     <ion-card-content>
       <h5>{{restaurantes.get('descripcion')}}</h5>
       <h5>Platos:</h5>
       <br>
       <h6> {{restaurantes.get('platos')}}</h6>
-          
+
     </ion-card-content>
-    
+
   </ion-card>
 
 </ion-content>
