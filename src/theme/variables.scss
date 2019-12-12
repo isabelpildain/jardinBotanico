@@ -5,7 +5,7 @@
 :root {
   
   /** primary **/
-  --ion-color-primary: linear-gradient(160deg ,#5e92c3 10%,#339999 );
+  --ion-color-primary: #7c2344;
   --ion-color-primary-rgb: 56, 128, 255;
   --ion-color-primary-contrast: #ffffff;
   --ion-color-primary-contrast-rgb: 255, 255, 255;
@@ -13,7 +13,7 @@
   --ion-color-primary-tint: #4c8dff;
 
   /** secondary **/
-  --ion-color-secondary: linear-gradient(180deg,#0d5b88,#006666 50%,#339999);
+  --ion-color-secondary:#ab1c53;
   --ion-color-secondary-rgb: 12, 209, 232;
   --ion-color-secondary-contrast: #ffffff;
   --ion-color-secondary-contrast-rgb: 255, 255, 255;
@@ -21,7 +21,7 @@
   --ion-color-secondary-tint: #24d6ea;
 
   /** tertiary **/
-  --ion-color-tertiary:linear-gradient(170deg,#3c8181 10%,#2aadad ,#0077ff);
+  --ion-color-tertiary:#ccd304;
   --ion-color-tertiary-rgb: 112, 68, 255;
   --ion-color-tertiary-contrast: #ffffff;
   --ion-color-tertiary-contrast-rgb: 255, 255, 255;
@@ -29,7 +29,7 @@
   --ion-color-tertiary-tint: #7e57ff;
 
   /** success **/
-  --ion-color-success:linear-gradient(170deg,#3c8181 10%,#2aadad ,#0077ff);
+  --ion-color-success:#ce4015;
   --ion-color-success-rgb: 16, 220, 96;
   --ion-color-success-contrast: #ffffff;
   --ion-color-success-contrast-rgb: 255, 255, 255;
@@ -70,7 +70,7 @@
   --ion-color-medium-tint: #a2a4ab;
 
   /** light **/
-  --ion-color-light: #0beedb8a;
+  --ion-color-light: #fbfbfb8a;
   --ion-color-light-rgb: 244, 244, 244;
   --ion-color-light-contrast: #000000;
   --ion-color-light-contrast-rgb: 0, 0, 0;
