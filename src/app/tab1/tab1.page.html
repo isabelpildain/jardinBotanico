@@ -1,6 +1,6 @@
-<ion-content>
+<ion-content padding class="fondo">
 
-    <ion-card class="fondo">
+    <ion-card  class="fondo">
         <!-- <ion-card color="danger"> -->
         <!-- <h1 text-center style="font-weight: bold; text-size: 30px;">Bienvenidos</h1> -->
         <!-- <ion-card-header> -->
@@ -14,11 +14,12 @@
 
 
 
-        <h1 class="ion-text-center" style="color: black;" style="font-style: italic;font-weight: bold;" class="inicio" text-center>Mas de 46 Años
+        <h1 class="ion-text-center" style="font-style: italic;font-weight: bold;" text-center class="principal">Mas de
+            46 Años
             de Historia!</h1>
         <br>
-        <ion-card-title style="font-weight: bold" text-center class="letra">Mision</ion-card-title>
-        <p class="ion-text-center" padding class="parrafo" text-center class="letra">
+        <ion-card-title style="font-weight: bold" padding class="letra">Mision</ion-card-title>
+        <p class="ion-text-center" padding class="parrafo" class="letra">
             Creamos experiencias de encuentro y convivencia para la ciudad, integradas a estrategias de investigación,
             conservación,
             educación y cultura asociadas a la biodiversidad y a la relación del ser humano con el entorno natural.
@@ -30,14 +31,14 @@
         <hr>
         <br>
 
-        <ion-card-title style="font-weight: bold" text-center class="letra">Vision</ion-card-title>
-        <p class="ion-text-center" padding class="parrafo" text-center class="letra">
+        <ion-card-title style="font-weight: bold" padding class="letra">Vision</ion-card-title>
+        <p class="ion-text-center" padding class="parrafo" class="letra">
             En el 2020, El Jardin Botanico "Joaquin Antonio Uribe" de Medellín sera reconocido como institucion lider
             en la transformacion de la Ciudad, promoviendo
             experiencias y escenarios vivos de educacion, que propicien cambios positivos frente a la relacion de las
             personas con el entorno en le marco de un desarrollo sostenible.
         </p>
-        <ion-card>
+        <ion-card class="fondo">
             <img padding src="./assets/img/imagen.jpeg">
         </ion-card>
         <br>
@@ -47,7 +48,7 @@
             <!-- <h1 text-center style="font-weight: bold; text-size: 30px;">Bienvenidos</h1> -->
             <ion-card-header>
 
-                <iframe height="300pd" width="290pd"
+                <iframe height="300pd" width="260pd"
                     src="https://yofasele.sirv.com/Images/jardinbotanico/desde%20el%20aire.mp4" frameborder="0"
                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
                 </iframe>
@@ -61,10 +62,10 @@
 
 
 
-        <ion-card-title class="noticias" text-center class="letra">Noticias</ion-card-title>
+        <h1 class="noticias" text-center>Noticias</h1>
 
 
-        <ion-card>
+        <ion-card class="fondo">
 
             <ion-slides padding pager="true">
                 <ion-slide *ngFor="let Noticias of itemsInicio" class="fondo">
@@ -73,31 +74,36 @@
             </ion-slides>
 
             <ion-card-content>
-                <ion-button [href]="'/tabs/tab3'" class="letra">
+                <ion-button [href]="'/tabs/tab3'" color="tertiary">
                     <ion-icon name="ios-leaf"></ion-icon>Ver
                 </ion-button>
             </ion-card-content>
         </ion-card>
         <br>
-       
+
     </ion-card>
 
-   
+    | <br>
+    <br>
+    <ion-card padding class="fondo">
+        <marquee direction="down" width="300" height="210" behavior="alternate">
+            <div>
+                <img src="/assets/patro/alcaldia.png" alt="">
+                <img src="/assets/patro/pintuco.png" alt="">
+                <img src="/assets/patro/sura.png" alt="">
+                <img src="/assets/patro/fb.png" alt="">
+                <img src="/assets/patro/argos.png" alt="">
+            </div>
+        </marquee>
+        
+         <b><p class="ion-text-center" class="letra" text-center>comunicaciones@jbotanico.org <br> www.botanicomedellin.org<br> Calle #73 51 D 14 Medellín,
+            Colombia. <br> 4445500 ext.120 </p></b>
+    </ion-card>
+    <br>
+
+
+    <br>
     
-    <img class="img" padding src="./assets/img/sura.png">
-    <img padding class="img" src="./assets/img/GrupoArgos.png" height="120pd" width="360pd">
-    <br>
-    <br>
-    <br>
-    <br>
-    <img padding class="img" src="./assets/img/pintuco,.png" height="200pd" width="360pd">
-    <img padding class="img" src="./assets/img/alcaldia.png" height="200pd" width="360pd">
-    <img padding class="img" src="./assets/img/forjas.png" height="200pd" width="360pd">
-
-
-    <br>
-    <p class="ion-text-center" class="letra">comunicaciones@jbotanico.org 4445500 ext.103/<br> Calle #73 51 D 14 Medellín,
-        Colombia. www.botanicomedellin.org</p>
 
 
 

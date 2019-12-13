@@ -3,9 +3,10 @@
 
 /** Ionic CSS Variables **/
 :root {
+  --ion-background-color:url("/assets/recursos/fondo2.png");
   
   /** primary **/
-  --ion-color-primary: #990033;
+  --ion-color-primary: #80012b;
   --ion-color-primary-rgb: 56, 128, 255;
   --ion-color-primary-contrast: #ffffff;
   --ion-color-primary-contrast-rgb: 255, 255, 255;
@@ -13,7 +14,7 @@
   --ion-color-primary-tint: #4c8dff;
 
   /** secondary **/
-  --ion-color-secondary:#ab1c53;
+  --ion-color-secondary:#1c7eab;
   --ion-color-secondary-rgb: 12, 209, 232;
   --ion-color-secondary-contrast: #ffffff;
   --ion-color-secondary-contrast-rgb: 255, 255, 255;
@@ -21,7 +22,7 @@
   --ion-color-secondary-tint: #24d6ea;
 
   /** tertiary **/
-  --ion-color-tertiary:#ccd304;
+  --ion-color-tertiary:#4b8629;
   --ion-color-tertiary-rgb: 112, 68, 255;
   --ion-color-tertiary-contrast: #ffffff;
   --ion-color-tertiary-contrast-rgb: 255, 255, 255;
@@ -29,7 +30,7 @@
   --ion-color-tertiary-tint: #7e57ff;
 
   /** success **/
-  --ion-color-success:#ce4015;
+  --ion-color-success:#df572d;
   --ion-color-success-rgb: 16, 220, 96;
   --ion-color-success-contrast: #ffffff;
   --ion-color-success-contrast-rgb: 255, 255, 255;
@@ -37,7 +38,7 @@
   --ion-color-success-tint: #329e5b;
 
   /** warning **/
-  --ion-color-warning: linear-gradient(170deg,#6b1975 10% ,#f0e111);
+  --ion-color-warning: #990033;
   --ion-color-warning-rgb: 255, 206, 0;
   --ion-color-warning-contrast: #ffffff;
   --ion-color-warning-contrast-rgb: 255, 255, 255;
@@ -46,7 +47,7 @@
 
 
   /** danger **/
-  --ion-color-danger: #245f40;
+  --ion-color-danger:#df572d;
   --ion-color-danger-rgb: 245, 61, 61;
   --ion-color-danger-contrast: #82d5db;
   --ion-color-danger-contrast-rgb: 255, 255, 255;
@@ -54,7 +55,7 @@
   --ion-color-danger-tint: #f25454;
 
   /** dark **/
-  --ion-color-dark:linear-gradient(170deg,#793c81 10% ,#f09b11);
+  --ion-color-dark:#1c7eab;
   --ion-color-dark-rgb: 34, 34, 34;
   --ion-color-dark-contrast: #ffffff;
   --ion-color-dark-contrast-rgb: 255, 255, 255;
@@ -62,7 +63,7 @@
   --ion-color-dark-tint: #383a3e;
 
   /** medium **/
-  --ion-color-medium: linear-gradient(170deg,#813c61 10% ,#f05811);
+  --ion-color-medium: rgb(215, 221, 131);
   --ion-color-medium-rgb: 152, 154, 162;
   --ion-color-medium-contrast: #ffffff;
   --ion-color-medium-contrast-rgb: 255, 255, 255;
@@ -70,10 +71,13 @@
   --ion-color-medium-tint: #a2a4ab;
 
   /** light **/
-  --ion-color-light: #fbfbfb8a;
+  --ion-color-light:#fffdfa;
   --ion-color-light-rgb: 244, 244, 244;
   --ion-color-light-contrast: #000000;
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
+
 }
+
+

@@ -4,7 +4,7 @@
 }
 hr{
   height: 10px;
-  background-color: rgb(95, 131, 92);
+  background-color: rgb(65, 124, 59);
 }
 .logo{
   width: 95%;
@@ -19,7 +19,7 @@ hr{
   font-size: 30px;
 }
 hr{
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(112, 155, 55);
   height: 3px;
 }
 .img{
@@ -27,6 +27,9 @@ hr{
   height: 50%;
 }
 .fondo{
-
+   //background-image: url('/assets/recursos/fondo1.png');
+   background-color: white;
 }
-
+.principal{
+  color: #3d8633;
+}

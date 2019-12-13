@@ -18,7 +18,7 @@ export class AppComponent {
     {
       title: 'Que hacer en el Jardin?',
       url: '/institucional',
-      icon: 'md-cloudy-night'
+      icon: 'ios-bonfire'
     },
     {
       title: 'Horarios',
@@ -61,10 +61,6 @@ export class AppComponent {
   initializeApp() {
     this.platform.ready().then(() => {
 
-      this.statusBar.styleDefault();
-      this.splashScreen.hide();
-
-      timer(2000).subscribe(() => this.showSplash = false)
 
       Environment.setEnv({
         'API_KEY_FOR_BROWSER_RELEASE': 'AIzaSyDGODufigYaWvP-Lg2nmzoRkKd3QbqUsR0',
