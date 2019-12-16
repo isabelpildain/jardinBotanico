@@ -21,11 +21,11 @@
             <ion-icon name="ios-at"></ion-icon>
         </ion-fab-button>
         <ion-fab-list side="bottom">
-            <ion-fab-button (click)="openUrl1()"><ion-icon class="ic1" name="logo-facebook"></ion-icon></ion-fab-button>
-            <ion-fab-button (click)="openUrl2()"><ion-icon class="ic2" name="logo-instagram"></ion-icon></ion-fab-button>
-            <ion-fab-button (click)="openUrl3()"><ion-icon class="ic3" name="logo-linkedin"></ion-icon></ion-fab-button>
-            <ion-fab-button (click)="openUrl4()"><ion-icon class="ic4" name="logo-twitter"></ion-icon></ion-fab-button>            
-            <ion-fab-button (click)="openUrl5()"><ion-icon class="ic6" name="logo-youtube"></ion-icon></ion-fab-button>
+            <ion-fab-button (click)="openUrl1()" color="facebook"><ion-icon name="logo-facebook"></ion-icon></ion-fab-button>
+            <ion-fab-button (click)="openUrl2()" color="instagram"><ion-icon  name="logo-instagram"></ion-icon></ion-fab-button>
+            <ion-fab-button (click)="openUrl3()" color="in" ><ion-icon  name="logo-linkedin"></ion-icon></ion-fab-button>
+            <ion-fab-button (click)="openUrl4()" color="twitter"><ion-icon  name="logo-twitter"></ion-icon></ion-fab-button>            
+            <ion-fab-button (click)="openUrl5()" color="youtube"><ion-icon name="logo-youtube"></ion-icon></ion-fab-button>
         </ion-fab-list>        
     </ion-fab>
 
@@ -61,7 +61,5 @@
 
     </ion-tabs>
 
-    <!-- <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)"> -->
-        <!-- <ion-refresher-content pullingtext="Cargando Info..."></ion-refresher-content> -->
-    <!-- </ion-refresher> -->
+   
 </ion-content>

@@ -16,7 +16,7 @@ export class AppComponent {
 
   public appPages = [
     {
-      title: 'Que hacer en el Jardin?',
+      title: '¿Qué hacer en el Jardin?',
       url: '/institucional',
       icon: 'ios-bonfire'
     },
