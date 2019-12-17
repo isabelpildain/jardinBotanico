@@ -31,6 +31,11 @@ export class Tab1Page {
       });
     }
 
+    reproducirSonico (){
+      
+      alert ('tu evento click funciona');
+    }
+
    
 
 
