@@ -99,7 +99,7 @@ export class Tab2Page implements OnInit {
         const htmlInfoWindow = new HtmlInfoWindow();
         const frame: HTMLElement = document.createElement('div');
         frame.innerHTML = `
-        <div class="flip-container" id="flip-container">
+        <div class="flip-container" id="flip-container" style="width: 100px; height: 100px">
           <div class="flipper">
             <div class="front">
             <h3>` + title + `</h3>
@@ -121,8 +121,8 @@ export class Tab2Page implements OnInit {
             }
         });
         htmlInfoWindow.setContent(frame, {
-            width: '100px',
-            height: '100px'
+            width: '150px',
+            height: '150px'
         });
 
         if (title) {
